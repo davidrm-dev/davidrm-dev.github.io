@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nuevo PAE · Ingeniería de Sistemas y Computación UPTC</title>
+<style>
+:root{--bg:#fff;--sf:#f4f6f8;--tx:#16202b;--mu:#5a6877;--bd:#dbe1e8;--ac:#b45309;--ac2:#0f5c8a;--F:#2563a8;--D:#0f7b6c;--H:#a15c12;--P:#7a3fb0;--old:#8a97a6;--ok:#15803d;--no:#b91c1c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161d;--sf:#18212b;--tx:#e8eef4;--mu:#9aa8b6;--bd:#2a3644;--ac:#f59e0b;--ac2:#5bb4ea;--F:#5b9be0;--D:#3dc2ae;--H:#e0a04a;--P:#b98be6;--old:#7d8a99;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10161d;--sf:#18212b;--tx:#e8eef4;--mu:#9aa8b6;--bd:#2a3644;--ac:#f59e0b;--ac2:#5bb4ea;--F:#5b9be0;--D:#3dc2ae;--H:#e0a04a;--P:#b98be6;--old:#7d8a99;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--bd);display:flex;gap:4px;overflow-x:auto;padding:8px 12px}
+nav a{white-space:nowrap;padding:6px 11px;border-radius:99px;color:var(--mu);text-decoration:none;font-size:14px}nav a:hover,nav a.on{background:var(--ac);color:#fff}
+header{padding:56px 20px 40px;background:linear-gradient(135deg,#0b3a5c,#7c3a06);color:#fff;text-align:center}
+header h1{margin:8px auto;font-size:clamp(26px,5vw,44px);max-width:900px;line-height:1.15}header p{max-width:760px;margin:8px auto;opacity:.92}
+.tag{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:99px}
+section{max-width:1100px;margin:0 auto;padding:44px 20px 8px}h2{font-size:28px;margin:0 0 4px}h2+p.lead{color:var(--mu);margin:0 0 20px}h3{margin:22px 0 8px;font-size:18px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}.card{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.kpi b{display:block;font-size:30px;color:var(--ac)}.kpi small{color:var(--mu)}.kpi .arrow{font-size:15px;color:var(--mu)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px 10px;border-bottom:1px solid var(--bd);text-align:left;vertical-align:top}th{background:var(--sf);cursor:default}
+.wrap{overflow-x:auto;border:1px solid var(--bd);border-radius:12px}
+.pill{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;border:1px solid var(--bd);color:var(--mu)}.new{background:var(--ok);color:#fff;border-color:var(--ok)}.chg{background:var(--ac);color:#fff;border-color:var(--ac)}
+button,select{font:inherit;color:var(--tx);background:var(--sf);border:1px solid var(--bd);border-radius:99px;padding:6px 14px;cursor:pointer}button.on{background:var(--ac2);color:#fff;border-color:var(--ac2)}
+.bar-row{display:flex;gap:6px;align-items:flex-end;height:230px;padding:10px 4px;border-bottom:1px solid var(--bd)}
+.col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}.pair{display:flex;gap:3px;align-items:flex-end;height:100%;width:100%;justify-content:center}
+.b{width:42%;border-radius:5px 5px 0 0;position:relative;transition:height .6s}.b span{position:absolute;top:-17px;left:0;right:0;text-align:center;font-size:11px}.b.o{background:var(--old)}.b.n{background:var(--ac)}
+.lab{font-size:12px;color:var(--mu);margin-top:4px}.leg{display:flex;gap:16px;font-size:13px;color:var(--mu);margin:8px 0}.leg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px}
+.cols{display:grid;gap:14px;grid-template-columns:1fr 1fr}@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.col-h{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--bd);padding-bottom:6px;margin-bottom:8px}
+.c{border-left:5px solid var(--bd);background:var(--sf);border-radius:8px;padding:8px 11px;margin-bottom:7px;font-size:14px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.c small{display:block;color:var(--mu);font-size:12px}.F{border-color:var(--F)}.D{border-color:var(--D)}.H{border-color:var(--H)}.P{border-color:var(--P)}.O{border-color:var(--old)}
+.dim{opacity:.25}.cr{font-weight:700;white-space:nowrap}
+.hbar{display:grid;grid-template-columns:150px 1fr 40px;gap:8px;align-items:center;font-size:13px;margin:5px 0}.track{background:var(--sf);border-radius:6px;height:16px;overflow:hidden}.fill{height:100%;border-radius:6px}
+.donut{display:flex;gap:24px;align-items:center;flex-wrap:wrap}.donut svg{width:190px;height:190px}
+ul.tl{list-style:none;padding:0;margin:0;border-left:3px solid var(--ac);}ul.tl li{padding:2px 0 14px 16px;position:relative}ul.tl li:before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--ac)}
+.warn{border-left:5px solid var(--no)}footer{text-align:center;color:var(--mu);font-size:13px;padding:40px 20px 60px}
+</style></head><body>
+<nav id="nav"></nav>
+<header><span class="tag">Socialización del Proyecto Académico Educativo · V2 19-nov-2026</span>
+<h1>Ingeniería de Sistemas y Computación · UPTC</h1>
+<p>De 175 créditos y 10 semestres a 154 créditos y 9 semestres: la nueva imagen del programa frente al plan vigente.</p></header>
+
+<section id="info"><h2>Información general</h2><p class="lead">Ficha de identificación del programa (PAE, §1.1).</p>
+<div class="grid" id="kpis"></div>
+<div class="wrap" style="margin-top:16px"><table id="ficha"></table></div></section>
+
+<section id="mv"><h2>Misión, visión y objetivos</h2><p class="lead">Síntesis de los horizontes estratégicos (PAE §1.2–1.5).</p>
+<div class="grid"><div class="card"><h3>Misión</h3>Formar ingenieros que se apropien y apliquen conceptos, técnicas, métodos y herramientas de Gestión de la Información, Ingeniería del Software y Arquitectura e Infraestructura de TI, sobre bases de programación, computación y ciencias básicas.</div>
+<div class="card"><h3>Visión</h3>Ser centro de pensamiento y potenciación tecnológica, líder en la región, con impacto nacional y global, que ofrece soluciones al entorno mediante profesionales íntegros.</div></div>
+<h3>Objetivos del programa</h3><div class="grid">
+<div class="card"><b>O1 · Formación técnica</b><br>Analizar, diseñar, implementar y evaluar soluciones tecnológicas de calidad.</div>
+<div class="card"><b>O2 · Integralidad</b><br>Formación socio-humanística, ética y comunicativa con responsabilidad social, legal y ambiental.</div>
+<div class="card"><b>O3 · Investigación e innovación</b><br>Investigación, innovación y emprendimiento de base tecnológica.</div></div></section>
+
+<section id="identidad"><h2>Identidad y rasgos distintivos</h2><p class="lead">Qué hace diferente al programa (PAE §2).</p>
+<div class="grid"><div class="card"><b>Dos ejes</b><br>«Sistemas» y «Computación»: enfoque interdisciplinar que combina gestión de sistemas con teoría computacional.</div>
+<div class="card"><b>Teoría + práctica</b><br>Integración transversal de fundamentos teóricos y práctica aplicada.</div>
+<div class="card"><b>Algoritmos y software eficiente</b><br>Complejidad, lenguajes formales y compiladores.</div>
+<div class="card"><b>Conexión con la industria</b><br>Prácticas profesionales y tecnologías emergentes (nube, seguridad, IA).</div></div></section>
+
+<section id="perfiles"><h2>Perfiles</h2><p class="lead">Selecciona un perfil.</p>
+<div id="ptabs" style="display:flex;gap:8px;flex-wrap:wrap"></div><div class="card" id="pbody" style="margin-top:12px"></div></section>
+
+<section id="comp"><h2>Competencias y resultados de aprendizaje</h2><p class="lead">Seis competencias y siete RAE, con su nivel cognitivo (PAE §3.3–3.4).</p>
+<div class="wrap"><table><thead><tr><th>Competencia</th><th>RAE</th><th>Nivel</th></tr></thead><tbody id="comptb"></tbody></table></div></section>
+
+<section id="malla"><h2>Malla curricular: plan anterior vs. nuevo</h2><p class="lead">Compara semestre a semestre. El plan anterior se reconstruye desde la tabla de equivalencias (Tabla 13). Cada actividad nueva muestra sus prerrequisitos (Tabla 4 del PAE).</p>
+<div class="card" style="margin-bottom:14px"><b>Créditos por semestre</b>
+<div class="leg"><span><i style="background:var(--old)"></i>Plan anterior</span><span><i style="background:var(--ac)"></i>Plan nuevo</span></div><div class="bar-row" id="bars"></div></div>
+<div id="stabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"></div>
+<div class="leg" id="leg2"></div>
+<div class="cols"><div><div class="col-h"><b>Plan anterior</b><span id="oT"></span></div><div id="oL"></div></div>
+<div><div class="col-h"><b>Plan nuevo</b><span id="nT"></span></div><div id="nL"></div></div></div>
+<p class="lead" id="note" style="margin-top:10px;font-size:14px"></p>
+
+<h3>Tabla de equivalencias (filtrable)</h3>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px" id="flt"></div>
+<div class="wrap"><table><thead><tr><th>Sem. nuevo</th><th>Actividad nueva</th><th>Cr.</th><th>Equivalente anterior (sem.)</th><th>Cr. ant.</th><th>Δ</th><th>Prerrequisitos (nuevo plan)</th><th>Estado</th></tr></thead><tbody id="eqb"></tbody></table></div></section>
+
+<section id="estructura"><h2>Estructura curricular</h2><p class="lead">Distribución de los 154 créditos (PAE Tabla 6).</p>
+<div class="card donut"><svg viewBox="0 0 42 42" id="dn"></svg><div id="dl"></div></div>
+<h3>Créditos por componente</h3><div class="card" id="hb"></div>
+<h3>Trabajo de grado y requisitos</h3><div class="card">Trabajo de grado de 5 créditos, entre 4 y 12 meses, con 75 % de créditos aprobados (monografía, investigación, grupo de investigación, práctica empresarial o social, o primer semestre de posgrado afín). Requisito adicional: suficiencia en segunda lengua. Nivelación y lengua extranjera quedan como libre elección fuera del plan.</div></section>
+
+<section id="inv"><h2>Investigación e innovación</h2><p class="lead">Grupos y semilleros (PAE Tablas 11–12).</p>
+<div class="grid"><div class="card"><b>GIMI</b><br>Inteligencia de negocios, minería de datos, bases de datos espaciales, computación cuántica.</div>
+<div class="card"><b>GIS (Software)</b><br>Ingeniería de software, videojuegos, dispositivos embebidos, inteligencia artificial.</div>
+<div class="card"><b>TelemaTICs</b><br>Ciberseguridad, Internet of Everything, sistemas adaptativos.</div></div>
+<p><b>Semilleros:</b> SCIECOM · SITEC · TELEMATICS (Ciberseguridad; IoT y Sistemas adaptivos) · Turing-McCarthy · IDES · SIA · INSIDE · VISER · DEVGAMER · ICCE.</p></section>
+
+<section id="infra"><h2>Infraestructura y gestión</h2><p class="lead">Medios educativos y gestión académico-administrativa (PAE §6–7).</p>
+<div class="grid"><div class="card"><b>Laboratorios</b><br>Ciencias (Física), Electrónica (LS 112) y laboratorio del grupo GIS.</div>
+<div class="card"><b>Aulas de cómputo y software</b><br>Aulas de informática de la sede central y software especializado.</div>
+<div class="card"><b>Plataformas</b><br>Ambientes virtuales de aprendizaje (Moodle) y conectividad institucional.</div>
+<div class="card"><b>Admisión</b><br>45 cupos semestrales; prueba diagnóstica de matemáticas y lectura crítica.</div></div></section>
+
+<section id="transicion"><h2>Plan de transición</h2><p class="lead">Cómo pasan los estudiantes del plan anterior al nuevo (PAE §3.8).</p>
+<ul class="tl"><li><b>Vigencia</b><br>El nuevo plan rige desde el primer semestre del año siguiente a su aprobación y es el único para nuevo ingreso.</li>
+<li><b>Coexistencia</b><br>Máximo 4 años; luego el plan anterior se extingue.</li>
+<li><b>Opción A</b><br>Permanecer en el plan anterior dentro del periodo de coexistencia.</li>
+<li><b>Opción B (recomendada)</b><br>Migrar previo estudio de homologaciones, por resolución del Consejo de Facultad.</li>
+<li><b>Más del 70 % de créditos</b><br>Pueden terminar en el plan anterior; si no alcanzan, migran con reconocimiento total.</li>
+<li><b>Menos del 70 %</b><br>Se incentiva la migración con plan individualizado del Comité Curricular.</li></ul></section>
+
+<section id="revisar"><h2>Puntos por revisar antes de socializar</h2><p class="lead">Inconsistencias detectadas en el documento V2.</p>
+<div class="card warn"><ul id="rv" style="margin:0;padding-left:18px"></ul></div></section>
+<footer>Fuente: PAE Ingeniería de Sistemas y Computación V2 (19/11/2026). Presentación generada para socialización interna.</footer>
+
+<script>
+const $=s=>document.querySelector(s),E=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const SEC=[["info","Información"],["mv","Misión y visión"],["identidad","Identidad"],["perfiles","Perfiles"],["comp","Competencias"],["malla","Malla"],["estructura","Estructura"],["inv","Investigación"],["infra","Infraestructura"],["transicion","Transición"],["revisar","Revisar"]];
+$("#nav").innerHTML=SEC.map(s=>`<a href="#${s[0]}">${s[1]}</a>`).join("");
+const KP=[["Créditos","175","154"],["Semestres","10","9"],["Cupos por semestre","—","45"],["Actividades por semestre (máx.)","—","6"]];
+$("#kpis").innerHTML=KP.map(k=>`<div class="card kpi"><small>${k[0]}</small><b>${k[2]}</b><span class="arrow">${k[1]!=="—"?"antes: "+k[1]:"nuevo plan"}</span></div>`).join("");
+$("#ficha").innerHTML=[["Programa","Ingeniería de Sistemas y Computación"],["SNIES","2760"],["Creación","Acuerdo 015 de 1994"],["Sede / Facultad","Tunja · Facultad de Ingeniería"],["Título","Ingeniero de Sistemas y Computación"],["Modalidad / nivel","Presencial · Pregrado"],["Admisión","Semestral"],["Campo CINE 2013","TIC — Uso de computadores"],["NBC","Ingeniería de sistemas, telemática y afines"]].map(r=>`<tr><th style="width:35%">${r[0]}</th><td>${r[1]}</td></tr>`).join("");
+const PF={"Ingreso":["Motivación por el conocimiento y las tendencias tecnológicas","Comunicación oral y escrita efectiva","Pensamiento analítico y adaptabilidad","Respeto por la diversidad e interés en el inglés","Prueba diagnóstica: matemáticas (cálculo) y lectura crítica"],
+"Egreso":["Implementar y evaluar soluciones tecnológicas","Participar en grupos de investigación con empresa, academia y Estado","Crear y administrar empresas de base tecnológica","Gestionar el cambio con enfoque socio-humanístico","Comunicar soluciones en contextos locales, regionales y globales"],
+"Ocupacional":["Líder gestor de proyectos tecnológicos","Arquitecto de soluciones informáticas","Asesor, consultor, coordinador o auditor de TIC","Miembro de equipos de I+D interdisciplinarios","Gestor empresarial de base tecnológica"]};
+const pt=$("#ptabs");Object.keys(PF).forEach((k,i)=>{const b=E("button",i?"":"on","Perfil de "+k.toLowerCase());b.onclick=()=>{pt.querySelectorAll("button").forEach(x=>x.className="");b.className="on";sh(k)};pt.append(b)});
+const sh=k=>$("#pbody").innerHTML="<ul style='margin:0;padding-left:18px'>"+PF[k].map(x=>`<li>${x}</li>`).join("")+"</ul>";sh("Ingreso");
+const CP=[["C1 Apropiar fundamentos de Gestión de Información, Software, Infraestructura TI, Programación y ciencias básicas","RA1 Comprende conceptos y teorías","Comprender"],["C2 Diseñar soluciones sostenibles y con restricciones técnicas, económicas, sociales y ambientales","RA2 Diseña soluciones tecnológicas","Crear"],["C3 Implementar y evaluar con estándares y calidad","RA3 Implementa soluciones · RA4 Evalúa calidad","Aplicar · Evaluar"],["C4 Investigación disciplinar con rigor y ética","RA5 Aplica procesos de investigación","Aplicar"],["C5 Integración de equipos con formación socio-humanística","RA6 Trabajo individual y colaborativo","Aplicar"],["C6 Comunicar a públicos especializados y no especializados","RA7 Comunica ideas y soluciones","Aplicar"]];
+$("#comptb").innerHTML=CP.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><span class="pill">${r[2]}</span></td></tr>`).join("");
+/* [semNuevo, nombre, cr, tipo, [[ant, cr, semAnt]], flag] F fundamentación D disciplinar H socio-humanístico P profundización/proyecto */
+const N=[
+[1,"Cálculo Diferencial",3,"F",[["Cálculo I",4,1]]],[1,"Matemáticas Discretas",3,"F",[["Matemáticas Discretas",3,2]]],[1,"Física Mecánica",3,"F",[["Física I",4,2]]],[1,"Introducción a los Sistemas y a la Computación",2,"D",[]],[1,"Fundamentos de Algoritmos y Programación",3,"D",[["Algoritmos y Programación",4,1]]],[1,"Metodología de la Investigación*",3,"D",[["Metodología de la Investigación y Diseño Experimental",3,3]],1],
+[2,"Cálculo Integral",3,"F",[["Cálculo II",3,2]]],[2,"Álgebra Lineal",3,"F",[["Álgebra Lineal",3,2]]],[2,"Electromagnetismo y Ondas",3,"F",[["Física II",4,3]]],[2,"Programación I",3,"D",[["Programación I",4,2]]],[2,"Electrónica para Computación",3,"D",[["Electrónica General",4,5]]],[2,"Socio-Humanística I (electiva)",3,"H",[["Cátedra, Universidad y Entorno",3,1]]],
+[3,"Cálculo Multivariable",3,"F",[["Cálculo III",3,3]]],[3,"Probabilidad y Estadística",3,"F",[["Probabilidad y Estadística",3,4]]],[3,"Programación II",3,"D",[["Programación II",4,3],["Programación III",4,4]]],[3,"Bases de Datos I",3,"D",[["Bases de Datos I",4,5]]],[3,"Diseño de Interfaces para Sistemas Tecnológicos",2,"D",[]],[3,"Socio-Humanística II (electiva)",3,"H",[["Competencias Comunicativas",4,1]]],
+[4,"Ecuaciones Diferenciales",3,"F",[["Cálculo IV",3,4]]],[4,"Programación III",3,"D",[]],[4,"Bases de Datos II",3,"D",[["Bases de Datos II",4,6]]],[4,"Fundamentos de Transmisión y Redes de Datos",3,"D",[["Redes de Datos",4,8],["Transmisión de Datos",4,7]]],[4,"Fundamentos e Ingeniería de Requisitos de Software",3,"D",[["Ingeniería de Requisitos",4,5]]],[4,"Arquitectura y Organización de Computadores",3,"D",[["Arquitectura de Computadores",3,8]]],
+[5,"Métodos Numéricos",3,"F",[["Métodos Numéricos",3,5]]],[5,"Programación IV",3,"D",[]],[5,"Bases de Datos III",3,"D",[]],[5,"Infraestructura y Servicios de TI",3,"D",[]],[5,"Ingeniería de Software I",3,"D",[["Ingeniería del Software I",4,6]]],[5,"Socio-Humanística III (electiva)",3,"H",[["Socio-humanística I",3,1]]],
+[6,"Sistemas Operativos",3,"D",[["Sistemas Operativos",4,7]]],[6,"Programación Lineal y Optimización",3,"D",[["Investigación de Operaciones",4,6]]],[6,"Ingeniería Económica",3,"H",[["Economía",3,3]]],[6,"Fundamentos de Seguridad Informática",3,"D",[]],[6,"Ingeniería de Software II",3,"D",[["Ingeniería del Software II",4,7]]],[6,"Socio-Humanística IV (electiva)",3,"H",[["Ética y Política",4,2]]],
+[7,"Ingeniería de Software III",3,"D",[]],[7,"Lenguajes Formales y Compiladores",3,"D",[["Lenguajes Formales",4,7]]],[7,"Computación Paralela y Distribuida",2,"D",[["Sistemas Distribuidos",3,7]]],[7,"Infraestructura de Nube",3,"D",[]],[7,"Emprenderismo",3,"H",[["Administración",3,8]]],[7,"Socio-Humanística V (electiva)",3,"H",[["Socio-humanística II",3,3]]],
+[8,"Contratación Tecnológica",3,"D",[]],[8,"Gerencia y Contratación Informática",3,"D",[["Gerencia Informática",3,9]]],[8,"Electiva de Profundización I",4,"P",[]],[8,"Electiva de Profundización II",4,"P",[]],[8,"Inteligencia Computacional",3,"D",[["Inteligencia Computacional",4,8]]],[8,"Proyecto Integrador",3,"P",[]],
+[9,"Auditoría Informática",2,"D",[["Auditoría de Sistemas",3,9]]],[9,"Electiva de Profundización III",4,"P",[]],[9,"Modelos de Simulación",3,"D",[["Simulación",4,9]]],[9,"Trabajo de Grado",5,"P",[]]];
+const KN={F:"Fundamentación",D:"Disciplinar",H:"Social y humanístico",P:"Profundización / proyecto"};
+const NIN="Ninguno",PD="50 % de créditos del componente disciplinar";
+const PR={"Cálculo Diferencial":NIN,"Matemáticas Discretas":NIN,"Física Mecánica":NIN,"Introducción a los Sistemas y a la Computación":NIN,"Fundamentos de Algoritmos y Programación":NIN,"Metodología de la Investigación*":NIN,"Cálculo Integral":"Cálculo Diferencial","Álgebra Lineal":NIN,"Electromagnetismo y Ondas":"Física Mecánica","Programación I":NIN,"Electrónica para Computación":"Física Mecánica (recomendado)","Cálculo Multivariable":"Cálculo Integral","Probabilidad y Estadística":"Cálculo Integral","Programación II":"Programación I","Bases de Datos I":"Matemáticas Discretas","Diseño de Interfaces para Sistemas Tecnológicos":"Programación II","Ecuaciones Diferenciales":"Cálculo Multivariable","Programación III":"Programación II","Bases de Datos II":"Bases de Datos I","Fundamentos de Transmisión y Redes de Datos":"Electrónica para Computación","Fundamentos e Ingeniería de Requisitos de Software":NIN,"Arquitectura y Organización de Computadores":"Electrónica para Computación","Métodos Numéricos":"Cálculo Integral + Programación I","Programación IV":"Programación III","Bases de Datos III":"Bases de Datos II","Infraestructura y Servicios de TI":"Fundamentos de Transmisión y Redes de Datos","Ingeniería de Software I":"Fundamentos e Ingeniería de Requisitos de Software","Sistemas Operativos":"Arquitectura y Organización de Computadores","Programación Lineal y Optimización":"Álgebra Lineal","Fundamentos de Seguridad Informática":"Infraestructura y Servicios de TI","Ingeniería de Software II":"Ingeniería de Software I","Ingeniería de Software III":"Ingeniería de Software II","Lenguajes Formales y Compiladores":"Matemáticas Discretas","Computación Paralela y Distribuida":"Sistemas Operativos","Infraestructura de Nube":"Fundamentos de Seguridad Informática","Gerencia y Contratación Informática":"Ingeniería de Software I (recomendado)","Electiva de Profundización I":PD,"Electiva de Profundización II":PD,"Electiva de Profundización III":PD,"Inteligencia Computacional":"Probabilidad y Estadística + Programación III","Proyecto Integrador":"Ingeniería de Software I + Bases de Datos II","Auditoría Informática":"Ingeniería de Software II + Fundamentos de Seguridad Informática + Bases de Datos II","Modelos de Simulación":"Métodos Numéricos + Probabilidad y Estadística","Trabajo de Grado":"Proyecto Integrador + 75 % de créditos aprobados"};
+const pr=n=>PR[n[1]]||"No definido en la Tabla 4";
+const tot=s=>N.filter(n=>n[0]==s&&!n[5]).reduce((a,n)=>a+n[2],0);
+const oldC=s=>N.flatMap(n=>n[4].map(o=>({n:o[0],c:o[1],s:o[2],to:n[0],nn:n[1]}))).filter(o=>o.s==s);
+const oT=s=>oldC(s).reduce((a,o)=>a+o.c,0);
+const mx=24,S=[1,2,3,4,5,6,7,8,9,10];
+$("#bars").innerHTML=S.map(s=>{const o=s<=9?oT(s):0,n=s<=9?tot(s):0;return`<div class="col"><div class="pair"><div class="b o" style="height:${o/mx*100}%"><span>${o||"—"}</span></div><div class="b n" style="height:${n/mx*100}%"><span>${n||"—"}</span></div></div><div class="lab">S${s}</div></div>`}).join("");
+$("#leg2").innerHTML=Object.keys(KN).map(k=>`<span><i style="background:var(--${k})"></i>${KN[k]}</span>`).join("")+`<span><i style="background:var(--old)"></i>Plan anterior</span>`;
+let cur=1;const st=$("#stabs");S.forEach(s=>{const b=E("button",s==1?"on":"","Sem. "+s);b.onclick=()=>{st.querySelectorAll("button").forEach(x=>x.className="");b.className="on";cur=s;draw()};st.append(b)});
+function draw(){const s=cur,ol=oldC(s),nl=N.filter(n=>n[0]==s);
+$("#oL").innerHTML=ol.length?ol.map(o=>`<div class="c O"><div>${o.n}<small>→ nuevo: ${o.nn} (S${o.to})</small></div><span class="cr">${o.c} cr</span></div>`).join(""):`<div class="c O">${s==10?"Semestre sin detalle en el PAE (electivas, trabajo de grado y créditos restantes del plan de 175).":"Sin actividades homologadas listadas."}</div>`;
+$("#nL").innerHTML=nl.length?nl.map(n=>`<div class="c ${n[3]}"><div>${n[1]}<small>${n[4].length?"Equivale a: "+n[4].map(o=>o[0]).join(" + "):"Actividad nueva"}</small><small>🔗 Prerreq.: ${pr(n)}</small></div><span class="cr">${n[2]} cr</span></div>`).join(""):`<div class="c">El nuevo plan termina en el semestre 9.</div>`;
+$("#oT").textContent=ol.length?oT(s)+" créditos":"";$("#nT").textContent=nl.length?tot(s)+" créditos":"";
+$("#note").textContent=s==1?"* Metodología de la Investigación aparece en las Tablas 4, 6, 7 y 13 pero no en la Tabla 3; no se suma a los 154 créditos.":"Prerrequisitos tomados de la Tabla 4; en esa tabla algunas actividades están en otro semestre que en la Tabla 3."}
+draw();
+const FL={all:"Todas",nuevo:"Actividades nuevas",cambio:"Cambian créditos",igual:"Mismos créditos"};let ff="all";
+const fb=$("#flt");Object.keys(FL).forEach(k=>{const b=E("button",k=="all"?"on":"",FL[k]);b.onclick=()=>{fb.querySelectorAll("button").forEach(x=>x.className="");b.className="on";ff=k;eq()};fb.append(b)});
+function eq(){$("#eqb").innerHTML=N.map(n=>{const oc=n[4].reduce((a,o)=>a+o[1],0),d=n[2]-oc,k=!n[4].length?"nuevo":d?"cambio":"igual";if(ff!="all"&&ff!=k)return"";
+return`<tr><td>${n[0]}</td><td>${n[1]}</td><td>${n[2]}</td><td>${n[4].map(o=>o[0]+" (S"+o[2]+")").join("<br>")||"—"}</td><td>${n[4].length?oc:"—"}</td><td>${n[4].length?(d>0?"+":"")+d:"—"}</td><td>${pr(n)}</td><td><span class="pill ${k=="nuevo"?"new":k=="cambio"?"chg":""}">${k=="nuevo"?"Nueva":k=="cambio"?"Ajuste":"Igual"}</span></td></tr>`}).join("")}eq();
+const CO=[["Fundamentación",27,"F"],["Formación investigativa",3,"F"],["Núcleo de gestión",6,"F"],["Software",12,"D"],["AISTI (redes e infraestructura)",12,"D"],["Gestión de la información",9,"D"],["Programación",12,"D"],["Ciencias computacionales",15,"D"],["Núcleo integrador",23,"D"],["Electivas e interdisciplinar",20,"P"],["Humanístico y lenguaje",6,"H"],["Social y ambiental",9,"H"]];
+$("#hb").innerHTML=CO.map(c=>`<div class="hbar"><span>${c[0]}</span><div class="track"><div class="fill" style="width:${c[1]/27*100}%;background:var(--${c[2]})"></div></div><b>${c[1]}</b></div>`).join("");
+const DG=[["Fundamentación",23.37,"F"],["Disciplinar y profundización",66.89,"D"],["Social y humanístico",9.74,"H"]];let off=25;
+$("#dn").innerHTML=DG.map(d=>{const r=`<circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--${d[2]})" stroke-width="6" stroke-dasharray="${d[1]} ${100-d[1]}" stroke-dashoffset="${off}"/>`;off-=d[1];return r}).join("")+`<text x="21" y="22" text-anchor="middle" font-size="7" font-weight="700" fill="var(--tx)">154</text><text x="21" y="27" text-anchor="middle" font-size="3" fill="var(--mu)">créditos</text>`;
+$("#dl").innerHTML=DG.map(d=>`<div><i style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--${d[2]});margin-right:6px"></i>${d[0]}: <b>${d[1]} %</b></div>`).join("");
+const RV=["Metodología de la Investigación está en las Tablas 4, 6, 7 y 13 pero falta en la Tabla 3 (sin ella, el plan suma 154; con ella, 157).","Proyecto Integrador figura en el semestre 8 (Tabla 3) y en el 6 (Tabla 4); además se marca como «Electiva».","Trabajo de grado (5 cr) está como electiva y requiere el Proyecto Integrador y 75 % de créditos.","Tabla 4 usa semestres distintos a la Tabla 3 para varias actividades (p. ej. Bases de Datos I en S4 vs S3, Auditoría en S7 vs S9).","Los totales por semestre de la Tabla 13 (p. ej. S5 anterior = 10 cr) no coinciden con una malla anterior completa; el plan anterior solo se reconstruye parcialmente (139 de 175 créditos).","La Tabla 18 de laboratorios aún cita Física I–III y Electrónica General, nombres del plan anterior."];
+$("#rv").innerHTML=RV.map(r=>`<li>${r}</li>`).join("");
+const links=[...document.querySelectorAll("nav a")],obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id))}),{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("section").forEach(s=>obs.observe(s));
+</script></body></html>
