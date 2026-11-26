@@ -1,128 +1,894 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8">
+<html lang="es">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nuevo PAE · Ingeniería de Sistemas y Computación UPTC</title>
+<title>Nuevo PAE · Ingeniería de Sistemas y Computación · UPTC</title>
+<meta name="description" content="Qué cambia en el plan de estudios de Ingeniería de Sistemas y Computación de la UPTC: 154 créditos, 9 semestres, materias nuevas, prerrequisitos y plan de transición.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff;--sf:#f4f6f8;--tx:#16202b;--mu:#5a6877;--bd:#dbe1e8;--ac:#b45309;--ac2:#0f5c8a;--F:#2563a8;--D:#0f7b6c;--H:#a15c12;--P:#7a3fb0;--old:#8a97a6;--ok:#15803d;--no:#b91c1c;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161d;--sf:#18212b;--tx:#e8eef4;--mu:#9aa8b6;--bd:#2a3644;--ac:#f59e0b;--ac2:#5bb4ea;--F:#5b9be0;--D:#3dc2ae;--H:#e0a04a;--P:#b98be6;--old:#7d8a99;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#10161d;--sf:#18212b;--tx:#e8eef4;--mu:#9aa8b6;--bd:#2a3644;--ac:#f59e0b;--ac2:#5bb4ea;--F:#5b9be0;--D:#3dc2ae;--H:#e0a04a;--P:#b98be6;--old:#7d8a99;color-scheme:dark}
-html{scroll-padding-top:70px;scroll-behavior:smooth}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--bd);display:flex;gap:4px;overflow-x:auto;padding:8px 12px}
-nav a{white-space:nowrap;padding:6px 11px;border-radius:99px;color:var(--mu);text-decoration:none;font-size:14px}nav a:hover,nav a.on{background:var(--ac);color:#fff}
-header{padding:56px 20px 40px;background:linear-gradient(135deg,#0b3a5c,#7c3a06);color:#fff;text-align:center}
-header h1{margin:8px auto;font-size:clamp(26px,5vw,44px);max-width:900px;line-height:1.15}header p{max-width:760px;margin:8px auto;opacity:.92}
-.tag{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:99px}
-section{max-width:1100px;margin:0 auto;padding:44px 20px 8px}h2{font-size:28px;margin:0 0 4px}h2+p.lead{color:var(--mu);margin:0 0 20px}h3{margin:22px 0 8px;font-size:18px}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}.card{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:16px}
-.kpi b{display:block;font-size:30px;color:var(--ac)}.kpi small{color:var(--mu)}.kpi .arrow{font-size:15px;color:var(--mu)}
-table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px 10px;border-bottom:1px solid var(--bd);text-align:left;vertical-align:top}th{background:var(--sf);cursor:default}
-.wrap{overflow-x:auto;border:1px solid var(--bd);border-radius:12px}
-.pill{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;border:1px solid var(--bd);color:var(--mu)}.new{background:var(--ok);color:#fff;border-color:var(--ok)}.chg{background:var(--ac);color:#fff;border-color:var(--ac)}
-button,select{font:inherit;color:var(--tx);background:var(--sf);border:1px solid var(--bd);border-radius:99px;padding:6px 14px;cursor:pointer}button.on{background:var(--ac2);color:#fff;border-color:var(--ac2)}
-.bar-row{display:flex;gap:6px;align-items:flex-end;height:230px;padding:10px 4px;border-bottom:1px solid var(--bd)}
-.col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}.pair{display:flex;gap:3px;align-items:flex-end;height:100%;width:100%;justify-content:center}
-.b{width:42%;border-radius:5px 5px 0 0;position:relative;transition:height .6s}.b span{position:absolute;top:-17px;left:0;right:0;text-align:center;font-size:11px}.b.o{background:var(--old)}.b.n{background:var(--ac)}
-.lab{font-size:12px;color:var(--mu);margin-top:4px}.leg{display:flex;gap:16px;font-size:13px;color:var(--mu);margin:8px 0}.leg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px}
-.cols{display:grid;gap:14px;grid-template-columns:1fr 1fr}@media(max-width:760px){.cols{grid-template-columns:1fr}}
-.col-h{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--bd);padding-bottom:6px;margin-bottom:8px}
-.c{border-left:5px solid var(--bd);background:var(--sf);border-radius:8px;padding:8px 11px;margin-bottom:7px;font-size:14px;display:flex;justify-content:space-between;gap:8px;align-items:center}
-.c small{display:block;color:var(--mu);font-size:12px}.F{border-color:var(--F)}.D{border-color:var(--D)}.H{border-color:var(--H)}.P{border-color:var(--P)}.O{border-color:var(--old)}
-.dim{opacity:.25}.cr{font-weight:700;white-space:nowrap}
-.hbar{display:grid;grid-template-columns:150px 1fr 40px;gap:8px;align-items:center;font-size:13px;margin:5px 0}.track{background:var(--sf);border-radius:6px;height:16px;overflow:hidden}.fill{height:100%;border-radius:6px}
-.donut{display:flex;gap:24px;align-items:center;flex-wrap:wrap}.donut svg{width:190px;height:190px}
-ul.tl{list-style:none;padding:0;margin:0;border-left:3px solid var(--ac);}ul.tl li{padding:2px 0 14px 16px;position:relative}ul.tl li:before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--ac)}
-.warn{border-left:5px solid var(--no)}footer{text-align:center;color:var(--mu);font-size:13px;padding:40px 20px 60px}
-</style></head><body>
-<nav id="nav"></nav>
-<header><span class="tag">Socialización del Proyecto Académico Educativo · V2 19-nov-2026</span>
-<h1>Ingeniería de Sistemas y Computación · UPTC</h1>
-<p>De 175 créditos y 10 semestres a 154 créditos y 9 semestres: la nueva imagen del programa frente al plan vigente.</p></header>
+:root{
+  --ink:#12161c;--ink-2:#2a313b;--muted:#5a6370;--paper:#f5f6f8;--card:#fff;--line:#e1e4e9;
+  --night:#0d1015;--night-2:#151a21;--night-3:#1c222b;--night-line:#262d37;--night-tx:#e8ecf1;--night-mu:#9aa3af;
+  --gold:#e0a526;--gold-ink:#8a5b00;--gold-soft:#fbf1dc;--red:#e07a6a;
+  --F:#3d6fa6;--D:#1d8467;--H:#b4552e;--P:#c48a12;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono);font-feature-settings:"tnum"}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-<section id="info"><h2>Información general</h2><p class="lead">Ficha de identificación del programa (PAE, §1.1).</p>
-<div class="grid" id="kpis"></div>
-<div class="wrap" style="margin-top:16px"><table id="ficha"></table></div></section>
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:40;padding-top:env(safe-area-inset-top,0px);transition:background .4s var(--ease),border-color .4s var(--ease);border-bottom:1px solid transparent}
+.nav.solid{background:rgba(245,246,248,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-color:var(--line)}
+.nav-in{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:-.01em;white-space:nowrap;color:#fff;transition:color .3s}
+.nav.solid .brand{color:var(--ink)}
+.brand i{width:26px;height:26px;border-radius:8px;background:var(--gold);display:grid;place-items:center;font:600 12px var(--mono);color:var(--night);font-style:normal}
+.links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto;mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent)}
+.links::-webkit-scrollbar{display:none}
+.links a{white-space:nowrap;text-decoration:none;font-size:13.5px;padding:7px 12px;border-radius:99px;color:rgba(255,255,255,.72);transition:color .25s,background .25s}
+.nav.solid .links a{color:var(--muted)}
+.links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav.solid .links a:hover{color:var(--ink);background:rgba(18,22,28,.06)}
+.links a.on,.nav.solid .links a.on{background:var(--ink);color:#fff}
+.links a.on{background:var(--gold);color:var(--night)}
+.nav.solid .links a.on{background:var(--ink);color:#fff}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--gold);transform-origin:left;transform:scaleX(0)}
 
-<section id="mv"><h2>Misión, visión y objetivos</h2><p class="lead">Síntesis de los horizontes estratégicos (PAE §1.2–1.5).</p>
-<div class="grid"><div class="card"><h3>Misión</h3>Formar ingenieros que se apropien y apliquen conceptos, técnicas, métodos y herramientas de Gestión de la Información, Ingeniería del Software y Arquitectura e Infraestructura de TI, sobre bases de programación, computación y ciencias básicas.</div>
-<div class="card"><h3>Visión</h3>Ser centro de pensamiento y potenciación tecnológica, líder en la región, con impacto nacional y global, que ofrece soluciones al entorno mediante profesionales íntegros.</div></div>
-<h3>Objetivos del programa</h3><div class="grid">
-<div class="card"><b>O1 · Formación técnica</b><br>Analizar, diseñar, implementar y evaluar soluciones tecnológicas de calidad.</div>
-<div class="card"><b>O2 · Integralidad</b><br>Formación socio-humanística, ética y comunicativa con responsabilidad social, legal y ambiental.</div>
-<div class="card"><b>O3 · Investigación e innovación</b><br>Investigación, innovación y emprendimiento de base tecnológica.</div></div></section>
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100dvh;background:var(--night);color:var(--night-tx);overflow:hidden;display:flex;align-items:center;padding:110px 0 70px}
+.hero .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 70% at 70% 40%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 70% 40%,#000 20%,transparent 75%)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none}
+.blob.a{width:520px;height:520px;right:-120px;top:-80px;background:radial-gradient(circle,rgba(224,165,38,.30),transparent 65%);animation:drift 22s ease-in-out infinite alternate}
+.blob.b{width:460px;height:460px;left:-160px;bottom:-160px;background:radial-gradient(circle,rgba(61,111,166,.28),transparent 65%);animation:drift 26s ease-in-out infinite alternate-reverse}
+@keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-60px,40px,0) scale(1.08)}100%{transform:translate3d(30px,-30px,0) scale(.96)}}
+.hero-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 12.5px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--night-mu)}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(224,165,38,.6);animation:ping 2.4s var(--ease) infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(224,165,38,.55)}80%,100%{box-shadow:0 0 0 10px rgba(224,165,38,0)}}
+.hero h1{font-size:clamp(2.35rem,5.2vw,4.3rem);line-height:1.02;letter-spacing:-.035em;font-weight:700;margin:20px 0 22px;max-width:14ch}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(105%);transition:transform 1.1s var(--ease);transition-delay:calc(var(--i)*55ms + 120ms)}
+.ready .hero h1 .w>span,.no-js .hero h1 .w>span{transform:none}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{font-size:clamp(1rem,1.3vw,1.15rem);color:var(--night-mu);max-width:54ch;margin:0 0 32px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:15px;padding:14px 22px;border-radius:99px;border:1px solid transparent;transition:transform .35s var(--ease),background .25s,color .25s,border-color .25s;will-change:transform;min-height:48px}
+.btn:active{transform:scale(.97)!important}
+.btn.primary{background:var(--gold);color:var(--night)}
+.btn.primary:hover{background:#ebb43c}
+.btn.ghost{border-color:rgba(255,255,255,.18);color:var(--night-tx)}
+.btn.ghost:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.04)}
+.btn svg{width:18px;height:18px;flex:none}
 
-<section id="identidad"><h2>Identidad y rasgos distintivos</h2><p class="lead">Qué hace diferente al programa (PAE §2).</p>
-<div class="grid"><div class="card"><b>Dos ejes</b><br>«Sistemas» y «Computación»: enfoque interdisciplinar que combina gestión de sistemas con teoría computacional.</div>
-<div class="card"><b>Teoría + práctica</b><br>Integración transversal de fundamentos teóricos y práctica aplicada.</div>
-<div class="card"><b>Algoritmos y software eficiente</b><br>Complejidad, lenguajes formales y compiladores.</div>
-<div class="card"><b>Conexión con la industria</b><br>Prácticas profesionales y tecnologías emergentes (nube, seguridad, IA).</div></div></section>
+.term{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:22px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 40px 80px -30px rgba(0,0,0,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow:hidden}
+.term-top{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);font:500 12px var(--mono);color:var(--night-mu)}
+.term-top b{color:var(--night-tx);font-weight:500}
+.term pre{margin:0;padding:20px 22px 8px;font:14px/1.85 var(--mono);color:var(--night-tx);min-height:252px;white-space:pre-wrap}
+.term .c{color:var(--night-mu)}.term .m{color:var(--red)}.term .p{color:var(--gold)}
+.caret{display:inline-block;width:8px;height:1.05em;background:var(--gold);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.term-stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.07)}
+.term-stats div{padding:18px 22px}
+.term-stats div+div{border-left:1px solid rgba(255,255,255,.07)}
+.term-stats small{display:block;font:500 11.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--night-mu)}
+.term-stats b{display:flex;align-items:baseline;gap:10px;font:600 44px/1.1 var(--mono);letter-spacing:-.04em;margin-top:4px}
+.term-stats s{font-size:18px;color:var(--night-mu);text-decoration-color:var(--red);text-decoration-thickness:2px}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--night-mu);display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-cue i{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s var(--ease) infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
 
-<section id="perfiles"><h2>Perfiles</h2><p class="lead">Selecciona un perfil.</p>
-<div id="ptabs" style="display:flex;gap:8px;flex-wrap:wrap"></div><div class="card" id="pbody" style="margin-top:12px"></div></section>
+/* ---------- MARQUEE ---------- */
+.marquee{background:var(--night);border-top:1px solid var(--night-line);color:var(--night-tx);padding:18px 0;overflow:hidden}
+.mq-row{display:flex;width:max-content;animation:mq 60s linear infinite}
+.mq-row.rev{animation-direction:reverse;animation-duration:75s;margin-top:10px;color:var(--night-mu)}
+.marquee:hover .mq-row{animation-play-state:paused}
+.mq-row span{display:inline-flex;align-items:center;gap:22px;padding-right:22px;font-size:clamp(1.1rem,2vw,1.5rem);font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.mq-row.rev span{font-weight:500;font-size:clamp(.95rem,1.5vw,1.1rem)}
+.mq-row span::after{content:"";width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex:none}
+.mq-row.rev span::after{background:var(--night-line)}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-<section id="comp"><h2>Competencias y resultados de aprendizaje</h2><p class="lead">Seis competencias y siete RAE, con su nivel cognitivo (PAE §3.3–3.4).</p>
-<div class="wrap"><table><thead><tr><th>Competencia</th><th>RAE</th><th>Nivel</th></tr></thead><tbody id="comptb"></tbody></table></div></section>
+/* ---------- SECTIONS ---------- */
+section{padding:120px 0}
+section.dark{background:var(--night);color:var(--night-tx)}
+section.white{background:var(--card)}
+.sh{display:grid;grid-template-columns:5fr 6fr;gap:40px;align-items:end;margin-bottom:56px}
+.sh .tag{font:500 12.5px var(--mono);color:var(--gold-ink);letter-spacing:.04em;text-transform:uppercase;display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.dark .sh .tag{color:var(--gold)}
+.sh .tag::before{content:"";width:22px;height:1px;background:currentColor}
+.sh h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.05;letter-spacing:-.03em;margin:0;font-weight:700;max-width:16ch}
+.sh p{margin:0;color:var(--muted);font-size:1.06rem;max-width:58ch}
+.dark .sh p{color:var(--night-mu)}
 
-<section id="malla"><h2>Malla curricular: plan anterior vs. nuevo</h2><p class="lead">Compara semestre a semestre. El plan anterior se reconstruye desde la tabla de equivalencias (Tabla 13). Cada actividad nueva muestra sus prerrequisitos (Tabla 4 del PAE).</p>
-<div class="card" style="margin-bottom:14px"><b>Créditos por semestre</b>
-<div class="leg"><span><i style="background:var(--old)"></i>Plan anterior</span><span><i style="background:var(--ac)"></i>Plan nuevo</span></div><div class="bar-row" id="bars"></div></div>
-<div id="stabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"></div>
-<div class="leg" id="leg2"></div>
-<div class="cols"><div><div class="col-h"><b>Plan anterior</b><span id="oT"></span></div><div id="oL"></div></div>
-<div><div class="col-h"><b>Plan nuevo</b><span id="nT"></span></div><div id="nL"></div></div></div>
-<p class="lead" id="note" style="margin-top:10px;font-size:14px"></p>
+.js .reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .9s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--i,0)*80ms)}
+.js .reveal.in{opacity:1;transform:none}
 
-<h3>Tabla de equivalencias (filtrable)</h3>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px" id="flt"></div>
-<div class="wrap"><table><thead><tr><th>Sem. nuevo</th><th>Actividad nueva</th><th>Cr.</th><th>Equivalente anterior (sem.)</th><th>Cr. ant.</th><th>Δ</th><th>Prerrequisitos (nuevo plan)</th><th>Estado</th></tr></thead><tbody id="eqb"></tbody></table></div></section>
+/* ---------- BENTO ---------- */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.tile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px;overflow:hidden;isolation:isolate;box-shadow:0 20px 40px -24px rgba(18,22,28,.12)}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(224,165,38,.13),transparent 45%);opacity:0;transition:opacity .4s}
+.tile:hover::before{opacity:1}
+.tile .k{font:600 clamp(2.6rem,5vw,4rem)/1 var(--mono);letter-spacing:-.05em;color:var(--ink)}
+.tile .k small{font-family:var(--sans);font-weight:500;font-size:.34em;letter-spacing:-.01em;color:var(--muted);margin-left:6px}
+.tile h3{margin:14px 0 8px;font-size:1.15rem;letter-spacing:-.015em}
+.tile p{margin:0;color:var(--muted);font-size:.97rem;max-width:46ch}
+.t1{grid-column:span 7;grid-row:span 2;display:flex;flex-direction:column;background:var(--night);color:var(--night-tx);border-color:var(--night-line)}
+.t1 .k{color:var(--gold);font-size:clamp(4rem,9vw,7.5rem)}
+.t1 p{color:var(--night-mu)}
+.t1::before{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(224,165,38,.18),transparent 45%)}
+.t2{grid-column:span 5}.t3{grid-column:span 5}.t4{grid-column:span 4}.t5{grid-column:span 4}.t6{grid-column:span 4}
+.cmp{margin-top:auto;padding-top:36px;display:grid;gap:14px}
+.cmp-row{display:grid;grid-template-columns:86px 1fr 52px;align-items:center;gap:14px;font:500 13px var(--mono);color:var(--night-mu)}
+.cmp-bar{height:14px;border-radius:99px;background:var(--night-3);overflow:hidden}
+.cmp-bar i{display:block;height:100%;border-radius:99px;transform-origin:left;transform:scaleX(0);transition:transform 1.6s var(--ease) .3s}
+.in .cmp-bar i{transform:scaleX(var(--v))}
+.cmp-row b{color:var(--night-tx);text-align:right}
+.ticker{height:96px;overflow:hidden;margin-top:18px;mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent);-webkit-mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
+.ticker ul{list-style:none;margin:0;padding:0;animation:tick 22s linear infinite}
+.ticker li{height:32px;display:flex;align-items:center;gap:10px;font-weight:500;font-size:.95rem}
+.ticker li::before{content:"+";font:600 14px var(--mono);color:var(--D)}
+@keyframes tick{to{transform:translateY(-50%)}}
+.dots{display:flex;gap:6px;margin-top:18px}
+.dots i{width:100%;height:30px;border-radius:8px;background:var(--gold-soft);border:1px solid #f0dfb8;transform:scaleY(.2);transform-origin:bottom;transition:transform .8s var(--ease);transition-delay:calc(var(--i)*90ms + .2s)}
+.in .dots i{transform:none}
+.dots i.x{background:transparent;border:1px dashed var(--line)}
+.ring{width:84px;height:84px;margin-top:16px}
+.ring circle{fill:none;stroke-width:9}
+.ring .bg{stroke:var(--line)}
+.ring .fg{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:0 100;transition:stroke-dasharray 1.6s var(--ease) .3s;transform:rotate(-90deg);transform-origin:center}
+.in .ring .fg{stroke-dasharray:20.8 100}
+.pi-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:18px;font-size:13px;font-weight:500}
+.pi-flow span{padding:6px 11px;border-radius:99px;border:1px solid var(--line);background:var(--paper)}
+.pi-flow span.g{background:var(--gold);border-color:var(--gold);color:var(--night)}
+.pi-flow svg{width:14px;height:14px;color:var(--muted)}
 
-<section id="estructura"><h2>Estructura curricular</h2><p class="lead">Distribución de los 154 créditos (PAE Tabla 6).</p>
-<div class="card donut"><svg viewBox="0 0 42 42" id="dn"></svg><div id="dl"></div></div>
-<h3>Créditos por componente</h3><div class="card" id="hb"></div>
-<h3>Trabajo de grado y requisitos</h3><div class="card">Trabajo de grado de 5 créditos, entre 4 y 12 meses, con 75 % de créditos aprobados (monografía, investigación, grupo de investigación, práctica empresarial o social, o primer semestre de posgrado afín). Requisito adicional: suficiencia en segunda lengua. Nivelación y lengua extranjera quedan como libre elección fuera del plan.</div></section>
+/* ---------- ENFOQUE ---------- */
+.focus{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start}
+.stack{display:grid;gap:10px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pillar{border-radius:20px;padding:22px 20px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;transform-origin:bottom}
+.pillar small{font:500 11.5px var(--mono);opacity:.8;letter-spacing:.04em;text-transform:uppercase}
+.pillar b{font-size:1.12rem;line-height:1.2;letter-spacing:-.01em}
+.pillar:nth-child(1){background:#1d6a8a}.pillar:nth-child(2){background:var(--D)}.pillar:nth-child(3){background:#2f5e94}
+.base{border-radius:16px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;font-weight:600;border:1px solid var(--line);background:var(--card)}
+.base small{font:500 12px var(--mono);color:var(--muted)}
+.base:nth-of-type(2){background:var(--paper)}
+.base.last{background:var(--ink);color:#fff;border-color:var(--ink)}
+.base.last small{color:var(--night-mu)}
+.js .stack .reveal{transform:translate3d(0,40px,0) scale(.98)}
+.js .stack .reveal.in{transform:none}
+.mv{display:grid;gap:22px}
+.mv blockquote{margin:0;padding:0 0 22px;border-bottom:1px solid var(--line)}
+.mv blockquote small{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--gold-ink)}
+.mv blockquote p{margin:8px 0 0;font-size:1.05rem;color:var(--ink-2)}
+.obj{list-style:none;margin:0;padding:0;counter-reset:o}
+.obj li{counter-increment:o;display:grid;grid-template-columns:40px 1fr;gap:6px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.98rem;color:var(--ink-2)}
+.obj li::before{content:"0" counter(o);font:600 13px var(--mono);color:var(--gold-ink);padding-top:2px}
+.obj b{color:var(--ink)}
+.traits{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;border-top:1px solid var(--line)}
+.traits div{padding:26px 24px 0 0}
+.traits div+div{padding-left:24px;border-left:1px solid var(--line)}
+.traits b{display:block;margin-bottom:6px;letter-spacing:-.01em}
+.traits p{margin:0;color:var(--muted);font-size:.94rem}
 
-<section id="inv"><h2>Investigación e innovación</h2><p class="lead">Grupos y semilleros (PAE Tablas 11–12).</p>
-<div class="grid"><div class="card"><b>GIMI</b><br>Inteligencia de negocios, minería de datos, bases de datos espaciales, computación cuántica.</div>
-<div class="card"><b>GIS (Software)</b><br>Ingeniería de software, videojuegos, dispositivos embebidos, inteligencia artificial.</div>
-<div class="card"><b>TelemaTICs</b><br>Ciberseguridad, Internet of Everything, sistemas adaptativos.</div></div>
-<p><b>Semilleros:</b> SCIECOM · SITEC · TELEMATICS (Ciberseguridad; IoT y Sistemas adaptivos) · Turing-McCarthy · IDES · SIA · INSIDE · VISER · DEVGAMER · ICCE.</p></section>
+/* ---------- SEMESTRES ---------- */
+.semtabs{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;align-items:end;height:200px;margin-bottom:28px;border-bottom:1px solid var(--night-line);padding-bottom:0}
+.semtab{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:none;border:0;padding:0 0 10px;color:var(--night-mu);border-radius:12px 12px 0 0}
+.semtab .bar{position:relative;border-radius:10px 10px 4px 4px;background:var(--night-3);height:calc(var(--h)*1%);transform-origin:bottom;transform:scaleY(0);transition:transform 1.1s var(--ease),background .3s;transition-delay:calc(var(--i)*60ms)}
+.in .semtab .bar{transform:none}
+.semtab .bar span{position:absolute;top:8px;left:0;right:0;text-align:center;font:600 13px var(--mono);color:var(--night-tx)}
+.semtab .lbl{margin-top:8px;font:500 12.5px var(--mono);text-align:center}
+.semtab:hover .bar{background:#2a323d}
+.semtab[aria-selected="true"] .bar{background:var(--gold)}
+.semtab[aria-selected="true"] .bar span{color:var(--night)}
+.semtab[aria-selected="true"] .lbl{color:var(--night-tx)}
+.semtab.ghost .bar{background:transparent;border:1px dashed var(--night-line)}
+.semtab.ghost .bar span{color:var(--night-mu)}
+.semtab.ghost[aria-selected="true"] .bar{background:rgba(224,107,90,.12);border-color:var(--red)}
+.semhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:18px}
+.semhead h3{margin:0;font-size:1.6rem;letter-spacing:-.02em}
+.semhead .meta{font:500 13px var(--mono);color:var(--night-mu)}
+.semcols{display:grid;grid-template-columns:1fr 130px 1.25fr;gap:0 14px;font:500 11.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--night-mu);padding:0 0 10px;border-bottom:1px solid var(--night-line);margin-bottom:12px}
+.semcols span:nth-child(2){text-align:center}
+.srow{display:grid;grid-template-columns:1fr 130px 1.25fr;gap:14px;align-items:center;padding:6px 0;animation:rowin .7s var(--ease) both;animation-delay:calc(var(--i)*65ms)}
+@keyframes rowin{from{opacity:0;transform:translate3d(0,16px,0)}}
+.oldc{padding:12px 14px;border-radius:14px;border:1px dashed var(--night-line);color:var(--night-mu);font-size:.93rem}
+.oldc+.oldc{margin-top:6px}
+.oldc small{display:block;font:500 11.5px var(--mono);margin-top:2px;opacity:.85}
+.oldc.none{font-style:normal;opacity:.6}
+.mid{display:flex;align-items:center;justify-content:center;gap:6px}
+.mid svg{width:42px;height:12px;color:var(--night-line);flex:none}
+.delta{font:600 11.5px var(--mono);padding:4px 9px;border-radius:99px;white-space:nowrap;border:1px solid var(--night-line);color:var(--night-mu)}
+.delta.nueva{background:var(--D);border-color:var(--D);color:#fff}
+.delta.menos{background:rgba(224,165,38,.14);border-color:rgba(224,165,38,.4);color:var(--gold)}
+.newc{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;background:var(--night-2);border:1px solid var(--night-line);border-left:4px solid var(--c,var(--night-line));transition:transform .35s var(--ease),border-color .3s}
+.newc:hover{transform:translateX(4px)}
+.newc b{font-weight:600;letter-spacing:-.01em}
+.newc small{display:block;font-size:12.5px;color:var(--night-mu);margin-top:3px}
+.newc .cr{font:600 13px var(--mono);white-space:nowrap;color:var(--night-tx)}
+.newc.flag{border-style:dashed}
+.badge{display:inline-block;font:500 10.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;padding:2px 7px;border-radius:6px;background:rgba(224,107,90,.16);color:var(--red);margin-left:6px;vertical-align:2px}
+.t-F{--c:var(--F)}.t-D{--c:var(--D)}.t-H{--c:var(--H)}.t-P{--c:var(--P)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--night-mu);margin-top:26px}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:12px;height:12px;border-radius:4px;background:var(--c)}
+.empty10{padding:44px 32px;border:1px dashed var(--night-line);border-radius:20px;color:var(--night-mu);max-width:640px;animation:rowin .7s var(--ease) both}
+.empty10 b{display:block;color:var(--night-tx);font-size:1.3rem;margin-bottom:6px;letter-spacing:-.01em}
 
-<section id="infra"><h2>Infraestructura y gestión</h2><p class="lead">Medios educativos y gestión académico-administrativa (PAE §6–7).</p>
-<div class="grid"><div class="card"><b>Laboratorios</b><br>Ciencias (Física), Electrónica (LS 112) y laboratorio del grupo GIS.</div>
-<div class="card"><b>Aulas de cómputo y software</b><br>Aulas de informática de la sede central y software especializado.</div>
-<div class="card"><b>Plataformas</b><br>Ambientes virtuales de aprendizaje (Moodle) y conectividad institucional.</div>
-<div class="card"><b>Admisión</b><br>45 cupos semestrales; prueba diagnóstica de matemáticas y lectura crítica.</div></div></section>
+/* ---------- MAPA ---------- */
+.map-shell{max-width:1480px;margin:0 auto;padding:0 24px}
+.map-scroll{overflow-x:auto;border-radius:28px;border:1px solid var(--line);background:var(--card);box-shadow:0 30px 60px -40px rgba(18,22,28,.25);scrollbar-width:thin}
+.map{position:relative;display:grid;grid-template-columns:repeat(9,minmax(116px,1fr));gap:0 26px;min-width:1200px;padding:26px 28px 30px}
+.map svg.edges{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.mcol{display:flex;flex-direction:column;gap:9px}
+.mcol h4{margin:0 0 6px;font:600 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:flex;justify-content:space-between}
+.mcol h4 span{color:var(--ink)}
+.chip{position:relative;z-index:1;text-align:left;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--c);border-radius:10px;padding:8px 10px 9px;font-size:12.5px;line-height:1.3;font-weight:500;min-height:52px;transition:opacity .35s var(--ease),transform .35s var(--ease),box-shadow .35s,background .3s,border-color .3s}
+.chip small{display:block;font:500 10.5px var(--mono);color:var(--muted);margin-top:3px}
+.chip:hover{transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(18,22,28,.3)}
+.chip.flag{border-style:dashed;border-left-style:solid}
+.map.focus .chip{opacity:.28}
+.map.focus .chip.on,.map.focus .chip.anc,.map.focus .chip.desc{opacity:1}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 14px 30px -14px rgba(18,22,28,.55)}
+.chip.on small{color:var(--night-mu)}
+.chip.anc{background:var(--gold-soft);border-color:#ecd39b;border-left-color:var(--gold)}
+.chip.desc{background:#e5f3ee;border-color:#b9ddd0;border-left-color:var(--D)}
+.edges path{fill:none;stroke:#c9cfd8;stroke-width:1.2;opacity:.55;transition:stroke .3s,opacity .3s,stroke-width .3s}
+.edges path.rec{stroke-dasharray:4 4}
+.map.focus .edges path{opacity:.08}
+.map.focus .edges path.up{stroke:var(--gold);stroke-width:2.4;opacity:1}
+.map.focus .edges path.down{stroke:var(--D);stroke-width:2.4;opacity:1}
+.edges path.draw{animation:draw 1.1s var(--ease) both}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+.map-info{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:28px;margin-top:22px;padding:24px 28px;border-radius:22px;background:var(--card);border:1px solid var(--line);min-height:118px}
+.map-info h3{margin:0 0 4px;font-size:1.2rem;letter-spacing:-.015em}
+.map-info .k{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.map-info .k i{width:10px;height:10px;border-radius:3px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font-size:13px;padding:4px 10px;border-radius:99px;background:var(--paper);border:1px solid var(--line)}
+.pills .x{background:transparent;border-style:dashed;color:var(--muted)}
+.hint{color:var(--muted);font-size:.95rem;margin:0}
+.map-legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--muted);margin:0 0 14px}
+.map-legend span{display:inline-flex;gap:8px;align-items:center}
+.map-legend svg{width:26px;height:8px}
 
-<section id="transicion"><h2>Plan de transición</h2><p class="lead">Cómo pasan los estudiantes del plan anterior al nuevo (PAE §3.8).</p>
-<ul class="tl"><li><b>Vigencia</b><br>El nuevo plan rige desde el primer semestre del año siguiente a su aprobación y es el único para nuevo ingreso.</li>
-<li><b>Coexistencia</b><br>Máximo 4 años; luego el plan anterior se extingue.</li>
-<li><b>Opción A</b><br>Permanecer en el plan anterior dentro del periodo de coexistencia.</li>
-<li><b>Opción B (recomendada)</b><br>Migrar previo estudio de homologaciones, por resolución del Consejo de Facultad.</li>
-<li><b>Más del 70 % de créditos</b><br>Pueden terminar en el plan anterior; si no alcanzan, migran con reconocimiento total.</li>
-<li><b>Menos del 70 %</b><br>Se incentiva la migración con plan individualizado del Comité Curricular.</li></ul></section>
+/* ---------- EQUIVALENCIAS ---------- */
+.eq-grid{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:start}
+.search{position:relative}
+.search svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
+.search input{width:100%;padding:20px 20px 20px 54px;border-radius:18px;border:1px solid var(--line);background:var(--card);font-size:1.05rem;transition:border-color .25s,box-shadow .25s}
+.search input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(224,165,38,.18)}
+.search label{display:block;font-weight:600;margin-bottom:10px}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.quick button{border:1px solid var(--line);background:var(--card);padding:8px 14px;border-radius:99px;font-size:13.5px;transition:background .25s,border-color .25s,transform .25s var(--ease);min-height:38px}
+.quick button:hover{border-color:var(--ink)}
+.quick button:active{transform:scale(.97)}
+.results{display:grid;gap:10px;min-height:260px;align-content:start}
+.res{display:grid;grid-template-columns:1fr 36px 1fr;align-items:stretch;gap:8px;animation:rowin .55s var(--ease) both;animation-delay:calc(var(--i)*50ms)}
+.res>div{padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.res .r-old{background:var(--paper);border-style:dashed}
+.res .r-new{border-left:4px solid var(--c)}
+.res small{display:block;font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.res b{display:block;font-weight:600;margin:3px 0 2px;letter-spacing:-.01em;line-height:1.3}
+.res span.cr{font:500 12.5px var(--mono);color:var(--muted)}
+.res .arr{display:grid;place-items:center;color:var(--gold-ink)}
+.res .arr svg{width:22px;height:22px}
+.res .note{grid-column:1/-1;font-size:13px;color:var(--muted);padding:0 4px}
+mark{background:var(--gold-soft);color:inherit;border-radius:3px;padding:0 1px}
+.noresult{padding:28px;border:1px dashed var(--line);border-radius:18px;color:var(--muted);animation:rowin .5s var(--ease) both}
+.noresult b{color:var(--ink);display:block;margin-bottom:4px}
+details.full{margin-top:64px;border-top:1px solid var(--line);padding-top:24px}
+details.full summary{cursor:pointer;font-weight:600;font-size:1.1rem;list-style:none;display:flex;align-items:center;gap:10px}
+details.full summary::-webkit-details-marker{display:none}
+details.full summary svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+details.full[open] summary svg{transform:rotate(90deg)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 14px}
+.filters button{border:1px solid var(--line);background:var(--card);padding:8px 14px;border-radius:99px;font-size:13.5px;min-height:38px}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:820px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 11.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--paper);position:sticky;top:0}
+td.n{font-family:var(--mono)}
+tr:last-child td{border-bottom:0}
+.st{font:600 11px var(--mono);padding:3px 8px;border-radius:99px;border:1px solid var(--line);white-space:nowrap}
+.st.nueva{background:var(--D);color:#fff;border-color:var(--D)}
+.st.menos{background:var(--gold-soft);border-color:#ecd39b;color:var(--gold-ink)}
 
-<section id="revisar"><h2>Puntos por revisar antes de socializar</h2><p class="lead">Inconsistencias detectadas en el documento V2.</p>
-<div class="card warn"><ul id="rv" style="margin:0;padding-left:18px"></ul></div></section>
-<footer>Fuente: PAE Ingeniería de Sistemas y Computación V2 (19/11/2026). Presentación generada para socialización interna.</footer>
+/* ---------- ESTRUCTURA ---------- */
+.struct{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+.donut{position:relative;width:min(380px,100%);aspect-ratio:1;margin:0 auto}
+.donut svg{width:100%;height:100%;transform:rotate(-90deg)}
+.donut circle{fill:none;stroke-width:5.2}
+.donut .seg{stroke-dasharray:0 100;transition:stroke-dasharray 1.4s var(--ease),stroke-width .3s;transition-delay:calc(var(--i)*250ms + .2s)}
+.donut .seg:hover{stroke-width:6.4}
+.donut .center{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.donut .center b{font:600 clamp(3rem,6vw,4.4rem)/1 var(--mono);letter-spacing:-.05em}
+.donut .center small{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:6px}
+.dleg{display:grid;gap:4px;margin-top:28px}
+.dleg div{display:grid;grid-template-columns:14px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:.97rem}
+.dleg i{width:14px;height:14px;border-radius:4px}
+.dleg b{font-family:var(--mono)}
+.hb{display:grid;gap:4px}
+.hb-row{display:grid;grid-template-columns:minmax(150px,220px) 1fr 44px;gap:16px;align-items:center;padding:8px 0;font-size:.95rem}
+.hb-track{height:12px;border-radius:99px;background:var(--paper);overflow:hidden}
+.hb-track i{display:block;height:100%;border-radius:99px;background:var(--c);transform-origin:left;transform:scaleX(0);transition:transform 1.2s var(--ease);transition-delay:calc(var(--i)*70ms + .2s)}
+.in .hb-track i{transform:scaleX(var(--v))}
+.hb-row b{font-family:var(--mono);text-align:right}
+.hb-group{font:500 11.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:18px 0 4px;display:flex;align-items:center;gap:8px}
+.hb-group:first-child{margin-top:0}
+.hb-group i{width:10px;height:10px;border-radius:3px;background:var(--c)}
+
+/* ---------- PERFILES ---------- */
+.tabs{position:relative;display:inline-flex;gap:4px;padding:5px;border-radius:99px;background:var(--paper);border:1px solid var(--line);max-width:100%;overflow-x:auto}
+.tabs button{position:relative;z-index:1;border:0;background:none;padding:10px 18px;border-radius:99px;font-weight:600;font-size:14.5px;color:var(--muted);transition:color .3s;white-space:nowrap;min-height:44px}
+.tabs button[aria-selected="true"]{color:#fff}
+.tabs .ind{position:absolute;top:5px;bottom:5px;left:0;width:1px;border-radius:99px;background:var(--ink);transform-origin:left;transition:transform .55s var(--ease)}
+.prof{display:grid;grid-template-columns:4fr 8fr;gap:48px;margin-top:36px;align-items:start}
+.prof-intro b{display:block;font-size:1.5rem;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px}
+.prof-intro p{color:var(--muted);margin:0}
+.plist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.plist li{display:grid;grid-template-columns:34px 1fr;padding:16px 0;border-bottom:1px solid var(--line);animation:rowin .6s var(--ease) both;animation-delay:calc(var(--i)*60ms)}
+.plist li span{font:600 13px var(--mono);color:var(--gold-ink)}
+.comp{margin-top:90px}
+.comp h3{font-size:1.5rem;letter-spacing:-.02em;margin:0 0 6px}
+.comp>p{color:var(--muted);margin:0 0 26px;max-width:62ch}
+.crow{display:grid;grid-template-columns:56px 1.5fr 1fr 230px;gap:20px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+.crow:last-child{border-bottom:1px solid var(--line)}
+.crow .id{font:600 15px var(--mono)}
+.crow .ra{font-size:.9rem;color:var(--muted)}
+.bloom{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.bloom i{height:8px;border-radius:99px;background:var(--line);transform:scaleX(.2);transform-origin:left;transition:transform .6s var(--ease),background .4s;transition-delay:calc(var(--j)*70ms + .2s)}
+.in .bloom i{transform:none}
+.in .bloom i.f{background:var(--ink)}
+.in .bloom i.h{background:var(--gold)}
+.bloom-l{display:flex;justify-content:space-between;font:500 11px var(--mono);color:var(--muted);margin-top:6px}
+.bscale{display:flex;justify-content:flex-end;gap:16px;font:500 11.5px var(--mono);color:var(--muted);margin-bottom:8px}
+
+/* ---------- GRADO ---------- */
+.req{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--night-line);border-bottom:1px solid var(--night-line);margin-bottom:56px}
+.req div{padding:26px 26px 26px 0}
+.req div+div{border-left:1px solid var(--night-line);padding-left:26px}
+.req b{display:block;font:600 2rem/1 var(--mono);color:var(--gold);letter-spacing:-.04em;margin-bottom:10px}
+.req p{margin:0;color:var(--night-mu);font-size:.96rem}
+.req p strong{color:var(--night-tx);font-weight:600}
+.mods{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin;scrollbar-color:var(--night-line) transparent}
+.mod{flex:0 0 min(330px,82vw);scroll-snap-align:start;background:var(--night-2);border:1px solid var(--night-line);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:12px;transition:transform .45s var(--ease),border-color .3s}
+.mod:hover{transform:translateY(-6px);border-color:#3a4350}
+.mod .n{font:600 13px var(--mono);color:var(--gold)}
+.mod h3{margin:0;font-size:1.2rem;letter-spacing:-.015em;line-height:1.25}
+.mod ul{margin:auto 0 0;padding:14px 0 0 18px;border-top:1px solid var(--night-line);color:var(--night-mu);font-size:.92rem}
+.mod li+li{margin-top:6px}
+.pos{margin-top:48px;display:grid;grid-template-columns:4fr 8fr;gap:40px;align-items:start}
+.pos h3{margin:0;font-size:1.3rem;letter-spacing:-.015em}
+.pos p{color:var(--night-mu);margin:8px 0 0}
+.pos ul{list-style:none;margin:0;padding:0}
+.pos li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--night-line)}
+.pos li small{font:500 12px var(--mono);color:var(--night-mu);white-space:nowrap}
+
+/* ---------- TRANSICION ---------- */
+.tr-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px}
+.panel h3{margin:0 0 6px;font-size:1.25rem;letter-spacing:-.015em}
+.panel>p{margin:0 0 22px;color:var(--muted)}
+.pct{display:flex;align-items:baseline;gap:8px;font:600 4.2rem/1 var(--mono);letter-spacing:-.05em}
+.pct small{font-size:1rem;color:var(--muted);letter-spacing:0;font-family:var(--sans);font-weight:500}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;margin:10px 0 4px}
+input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--ink) var(--p,50%),var(--line) var(--p,50%))}
+input[type=range]::-moz-range-track{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--ink) var(--p,50%),var(--line) var(--p,50%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--gold);border:4px solid #fff;box-shadow:0 2px 10px rgba(18,22,28,.3);margin-top:-10px;transition:transform .2s var(--ease)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--gold);border:4px solid #fff;box-shadow:0 2px 10px rgba(18,22,28,.3)}
+input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
+.scale{position:relative;display:flex;justify-content:space-between;font:500 11.5px var(--mono);color:var(--muted)}
+.scale span.mark{position:absolute;left:70%;transform:translateX(-50%);color:var(--ink)}
+.verdict{margin-top:24px;padding:20px 22px;border-radius:18px;background:var(--paper);border:1px solid var(--line);min-height:150px}
+.verdict.anim{animation:rowin .45s var(--ease) both}
+.verdict small{font:600 11.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--gold-ink)}
+.verdict b{display:block;font-size:1.15rem;margin:6px 0;letter-spacing:-.01em}
+.verdict p{margin:0;color:var(--ink-2);font-size:.95rem}
+.seg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.seg-btns button{flex:1;min-width:150px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 14px;font-weight:600;font-size:14px;min-height:48px;transition:background .25s,color .25s,border-color .25s}
+.seg-btns button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.coex{margin-top:28px}
+.coex-bar{display:grid;grid-template-columns:repeat(4,1fr) 70px;gap:4px;margin-top:10px}
+.coex-bar i{height:38px;border-radius:8px;background:var(--gold-soft);border:1px solid #ecd39b;display:grid;place-items:center;font:600 11.5px var(--mono);font-style:normal;color:var(--gold-ink);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease);transition-delay:calc(var(--i)*140ms + .2s)}
+.in .coex-bar i{transform:none}
+.coex-bar i.end{background:var(--ink);border-color:var(--ink);color:#fff}
+.coex small{font-size:13px;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;position:relative}
+.steps li{counter-increment:s;position:relative;padding:0 0 22px 52px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:600 13px var(--mono)}
+.steps li::after{content:"";position:absolute;left:16.5px;top:34px;bottom:2px;width:1px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:.94rem}
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:20px}
+.rules div{padding:20px 0;border-top:1px solid var(--line)}
+.rules b{display:block;margin-bottom:4px;letter-spacing:-.01em}
+.rules p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* ---------- HISTORIA ---------- */
+.tl{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(130px,1fr);gap:0;overflow-x:auto;padding:0 0 18px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--night-line) transparent}
+.tl-item{position:relative;padding:58px 18px 0 0;scroll-snap-align:start}
+.tl-item::before{content:"";position:absolute;left:0;right:0;top:20px;height:1px;background:var(--night-line)}
+.tl-item::after{content:"";position:absolute;left:0;top:20px;height:2px;margin-top:-.5px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .7s linear;transition-delay:calc(var(--i)*180ms)}
+.in .tl-item::after{transform:scaleX(1)}
+.tl-item i{position:absolute;left:0;top:13px;width:15px;height:15px;border-radius:50%;background:var(--night);border:2px solid var(--night-line);transition:background .3s,border-color .3s;transition-delay:calc(var(--i)*180ms)}
+.in .tl-item i{background:var(--gold);border-color:var(--gold)}
+.tl-item.now i{box-shadow:0 0 0 6px rgba(224,165,38,.2)}
+.tl-item b{display:block;font:600 1.6rem/1 var(--mono);letter-spacing:-.04em;margin-bottom:10px}
+.tl-item p{margin:0;color:var(--night-mu);font-size:.9rem;max-width:30ch}
+.tl-item.now b{color:var(--gold)}
+
+/* ---------- INVESTIGACION ---------- */
+.groups{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.grp{grid-column:span 4;padding:28px;border-radius:24px;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden;isolation:isolate}
+.grp::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(29,132,103,.1),transparent 45%);opacity:0;transition:opacity .4s}
+.grp:hover::before{opacity:1}
+.grp:nth-child(1){grid-column:span 5}.grp:nth-child(2){grid-column:span 4}.grp:nth-child(3){grid-column:span 3}
+.grp b{font:600 1.6rem/1 var(--sans);letter-spacing:-.03em}
+.grp small{display:block;font:500 12px var(--mono);color:var(--muted);margin:8px 0 14px}
+.grp p{margin:0;color:var(--ink-2);font-size:.95rem}
+.semis{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.semis span{padding:9px 15px;border-radius:99px;border:1px solid var(--line);background:var(--card);font:500 13px var(--mono);transition:transform .3s var(--ease),border-color .3s}
+.semis span:hover{transform:translateY(-3px);border-color:var(--ink)}
+.out{display:grid;grid-template-columns:5fr 7fr;gap:48px;margin-top:90px;align-items:start}
+.out h3{font-size:1.5rem;letter-spacing:-.02em;margin:0 0 8px}
+.out>div>p{color:var(--muted);margin:0}
+.olist{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.olist div{padding:18px 0;border-top:1px solid var(--line)}
+.olist b{display:block;letter-spacing:-.01em;margin-bottom:4px}
+.olist p{margin:0;color:var(--muted);font-size:.94rem}
+.infra{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid var(--line)}
+.infra div{padding:24px 22px 0 0}
+.infra div+div{padding-left:22px;border-left:1px solid var(--line)}
+.infra b{display:block;margin-bottom:4px}
+.infra p{margin:0;color:var(--muted);font-size:.93rem}
+
+footer{background:var(--night);color:var(--night-mu);padding:72px 0 calc(60px + env(safe-area-inset-bottom,0px));font-size:14px}
+.foot{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:end}
+.foot b{display:block;color:var(--night-tx);font-size:1.6rem;letter-spacing:-.025em;margin-bottom:10px;max-width:22ch;line-height:1.2}
+.foot p{margin:0;max-width:62ch}
+.foot a.top{justify-self:end;color:var(--night-tx);text-decoration:none;font:500 13px var(--mono);display:inline-flex;gap:8px;align-items:center;border:1px solid var(--night-line);padding:12px 18px;border-radius:99px;transition:border-color .3s}
+.foot a.top:hover{border-color:var(--gold)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1024px){
+  .t1{grid-column:span 12;grid-row:auto}.t2,.t3{grid-column:span 6}.t4,.t5,.t6{grid-column:span 4}
+  .traits,.infra{grid-template-columns:1fr 1fr}
+  .traits div:nth-child(3),.infra div:nth-child(3){border-left:0;padding-left:0}
+  .crow{grid-template-columns:48px 1fr 200px}.crow .ra{grid-column:2}.crow .bl{grid-column:3;grid-row:1/span 2}
+}
+@media (max-width:860px){
+  section{padding:88px 0}
+  .hero{padding:96px 0 80px}
+  .hero-in,.sh,.focus,.eq-grid,.struct,.prof,.pos,.out,.tr-grid,.foot{grid-template-columns:1fr}
+  .sh{gap:16px;margin-bottom:40px}
+  .bento{grid-template-columns:1fr}.bento .tile{grid-column:auto!important}
+  .pillars{grid-template-columns:1fr}.pillar{min-height:auto;gap:18px}
+  .plist,.olist,.rules{grid-template-columns:1fr}
+  .semtabs{height:150px;gap:4px}
+  .semtab .bar span{font-size:11px;top:5px}
+  .semtab .lbl{font-size:11px}
+  .semcols{display:none}
+  .srow{grid-template-columns:1fr;gap:6px;padding:12px 0;border-bottom:1px solid var(--night-line)}
+  .mid{justify-content:flex-start}
+  .mid svg{transform:rotate(90deg);width:20px}
+  .map-info{grid-template-columns:1fr;gap:16px}
+  .req{grid-template-columns:1fr}.req div+div{border-left:0;padding-left:0;border-top:1px solid var(--night-line)}
+  .groups{grid-template-columns:1fr}.grp{grid-column:auto!important}
+  .crow{grid-template-columns:40px 1fr}.crow .ra,.crow .bl{grid-column:2;grid-row:auto}
+  .foot a.top{justify-self:start}
+  .scroll-cue{display:none}
+}
+@media (max-width:560px){
+  .wrap,.map-shell{padding:0 16px}
+  .traits,.infra{grid-template-columns:1fr}
+  .traits div,.infra div{padding:20px 0 0!important;border-left:0!important}
+  .term pre{font-size:12.5px;padding:16px;min-height:228px}
+  .term-stats b{font-size:34px}
+  .res{grid-template-columns:1fr}.res .arr{transform:rotate(90deg);height:24px}
+  .panel{padding:24px}
+  .hb-row{grid-template-columns:1fr 40px;gap:6px 12px}.hb-row .hb-track{grid-column:1/-1;grid-row:2}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .mq-row,.ticker ul,.blob{animation:none!important}
+}
+</style>
+</head>
+<body class="no-js">
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Inicio"><i>IS</i><span>Nuevo PAE</span></a>
+    <nav class="links" id="links" aria-label="Secciones"></nav>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="grid-bg"></div><div class="blob a"></div><div class="blob b"></div>
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>PAE versión 2 · 19 nov 2026 · UPTC Tunja</span>
+      <h1 id="h1" data-split>Tu carrera cambia: <em>154 créditos</em> en 9 semestres.</h1>
+      <p class="lead">Ingeniería de Sistemas y Computación tiene un nuevo Proyecto Académico Educativo. Aquí ves qué materias llegan, cuáles se fusionan, qué te pide cada una antes de inscribirla y qué te conviene hacer si ya vas en el plan anterior.</p>
+      <div class="ctas">
+        <a class="btn primary mag" href="#semestres">Ver la malla nueva <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost mag" href="#transicion">Vengo del plan anterior</a>
+      </div>
+    </div>
+    <div class="term" aria-label="Resumen del cambio de plan">
+      <div class="term-top"><b>plan-de-estudios.diff</b><span>ISyC · SNIES 2760</span></div>
+      <pre id="term" aria-hidden="true"></pre>
+      <div class="term-stats">
+        <div><small>Créditos</small><b><span class="mono" data-count="175:154">154</span><s>175</s></b></div>
+        <div><small>Semestres</small><b><span class="mono" data-count="10:9">9</span><s>10</s></b></div>
+      </div>
+      <p class="sr">Antes: 175 créditos y 10 semestres. Ahora: 154 créditos y 9 semestres, con 11 materias nuevas y máximo 6 actividades por semestre.</p>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Desliza<i></i></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="mq-row" id="mq1"></div>
+  <div class="mq-row rev" id="mq2"></div>
+</div>
+
+<!-- CAMBIOS -->
+<section id="cambios">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">01 · En corto</div><h2>Lo que cambia, sin rodeos</h2></div>
+      <p>Si solo tienes un minuto, quédate con esto. Todo lo demás de la página es el detalle: materia por materia y semestre por semestre.</p>
+    </div>
+    <div class="bento">
+      <article class="tile t1 spot reveal">
+        <span class="eyebrow" style="color:var(--night-mu)">Créditos totales</span>
+        <div class="k" style="margin-top:14px">−21</div>
+        <h3>Veintiún créditos menos para graduarte</h3>
+        <p>Pasas de 175 a 154. La mayoría de materias que valían 4 créditos ahora valen 3, y algunas parejas de materias se volvieron una sola (Programación II y III, Redes y Transmisión de Datos).</p>
+        <div class="cmp">
+          <div class="cmp-row"><span>Plan anterior</span><div class="cmp-bar"><i style="--v:1;background:#4a535f"></i></div><b>175</b></div>
+          <div class="cmp-row"><span>Plan nuevo</span><div class="cmp-bar"><i style="--v:.88;background:var(--gold)"></i></div><b>154</b></div>
+        </div>
+      </article>
+      <article class="tile t2 spot reveal" style="--i:1">
+        <div class="k">9<small>semestres</small></div>
+        <h3>Un semestre menos</h3>
+        <p>El décimo semestre desaparece. La carrera termina en el noveno con Trabajo de Grado, Modelos de Simulación, Auditoría y la última electiva.</p>
+        <div class="dots" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i class="x" style="--i:9"></i></div>
+      </article>
+      <article class="tile t3 spot reveal" style="--i:2">
+        <div class="k"><span id="kNew">11</span><small>materias nuevas</small></div>
+        <h3>Contenidos que antes no estaban</h3>
+        <p>Sin contar electivas ni trabajo de grado. Varias responden a lo que pide hoy la industria: nube, seguridad, servicios de TI.</p>
+        <div class="ticker" aria-hidden="true"><ul id="ticker"></ul></div>
+      </article>
+      <article class="tile t4 spot reveal" style="--i:3">
+        <div class="k">6<small>máx.</small></div>
+        <h3>Actividades por semestre</h3>
+        <p>Ningún semestre pasa de seis. El más pesado es octavo, con 20 créditos; primero y noveno son los más livianos, con 14.</p>
+      </article>
+      <article class="tile t5 spot reveal" style="--i:4">
+        <div class="k">32<small>créditos</small></div>
+        <h3>Los eliges tú</h3>
+        <p>Tres electivas de profundización (12), cinco socio-humanísticas (15) y el trabajo de grado (5). Es el 20,8 % de la carrera.</p>
+        <svg class="ring" viewBox="0 0 42 42" aria-hidden="true"><circle class="bg" cx="21" cy="21" r="15.915"/><circle class="fg" cx="21" cy="21" r="15.915"/></svg>
+      </article>
+      <article class="tile t6 spot reveal" style="--i:5">
+        <div class="k">S8<small>octavo semestre</small></div>
+        <h3>Un proyecto que junta todo</h3>
+        <p>Lo guían profes de varias áreas y es el paso previo al trabajo de grado.</p>
+        <div class="pi-flow"><span>Ing. Software I</span><span>Bases de Datos II</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="g">Proyecto Integrador</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Trabajo de Grado</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ENFOQUE -->
+<section id="enfoque" class="white">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">02 · Enfoque</div><h2>Qué vas a estudiar aquí</h2></div>
+      <p>El programa tiene dos ejes en el nombre: sistemas (información, organizaciones, gestión) y computación (algoritmos, complejidad, lenguajes formales, compiladores). Sobre tres bases se levantan tres áreas de formación.</p>
+    </div>
+    <div class="focus">
+      <div class="stack" aria-label="Áreas y bases del programa">
+        <div class="pillars">
+          <div class="pillar reveal" style="--i:3"><small>Área 1</small><b>Gestión de la Información</b></div>
+          <div class="pillar reveal" style="--i:4"><small>Área 2</small><b>Ingeniería del Software</b></div>
+          <div class="pillar reveal" style="--i:5"><small>Área 3</small><b>Arquitectura e Infraestructura de TI</b></div>
+        </div>
+        <div class="base reveal" style="--i:2">Programación <small>base</small></div>
+        <div class="base reveal" style="--i:1">Computación <small>base</small></div>
+        <div class="base last reveal" style="--i:0">Ciencias básicas <small>base · matemáticas y física</small></div>
+      </div>
+      <div class="mv">
+        <blockquote class="reveal"><small>Misión, resumida</small><p>Formar ingenieros que usen conceptos, métodos y herramientas de esas tres áreas, con buena base en programación, computación y ciencias básicas.</p></blockquote>
+        <blockquote class="reveal" style="--i:1"><small>Visión, resumida</small><p>Ser un referente tecnológico en la región, con impacto nacional e internacional, que resuelve problemas reales con profesionales íntegros.</p></blockquote>
+        <ol class="obj reveal" style="--i:2">
+          <li><span><b>Técnica.</b> Analizar, diseñar, implementar y evaluar soluciones tecnológicas de calidad.</span></li>
+          <li><span><b>Integral.</b> Formación ética, humanística y comunicativa, con responsabilidad social, legal y ambiental.</span></li>
+          <li><span><b>Investigación.</b> Investigar, innovar y emprender con base tecnológica.</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="traits">
+      <div class="reveal"><b>Teoría y práctica a la vez</b><p>Casi todas las materias disciplinares son teórico-prácticas: 2 horas de teoría y 2 de práctica por semana.</p></div>
+      <div class="reveal" style="--i:1"><b>Grupos de 20</b><p>En las teórico-prácticas el cupo máximo por grupo es de 20 estudiantes.</p></div>
+      <div class="reveal" style="--i:2"><b>Algoritmos en serio</b><p>Complejidad, lenguajes formales y compiladores siguen siendo parte del núcleo.</p></div>
+      <div class="reveal" style="--i:3"><b>Mirando a la industria</b><p>Prácticas empresariales y temas actuales: nube, seguridad, inteligencia computacional.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEMESTRES -->
+<section id="semestres" class="dark">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">03 · Malla</div><h2>Semestre por semestre</h2></div>
+      <p>Cada barra es un semestre y su altura son los créditos. Toca uno: a la izquierda verás de qué materia del plan anterior viene cada asignatura y, a la derecha, cómo queda ahora.</p>
+    </div>
+    <div class="semtabs reveal" id="semtabs" role="tablist" aria-label="Semestres"></div>
+    <div id="sempanel" role="tabpanel" aria-live="polite"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section id="mapa">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">04 · Prerrequisitos</div><h2>Qué necesitas antes de cada materia</h2></div>
+      <p>Pasa el cursor o toca una materia. En dorado aparece la cadena de lo que debes aprobar antes; en verde, lo que esa materia te deja inscribir después.</p>
+    </div>
+  </div>
+  <div class="map-shell reveal">
+    <div class="map-legend">
+      <span><svg viewBox="0 0 26 8" aria-hidden="true"><path d="M0 4h26" stroke="#9aa3af" stroke-width="1.6"/></svg>Prerrequisito</span>
+      <span><svg viewBox="0 0 26 8" aria-hidden="true"><path d="M0 4h26" stroke="#9aa3af" stroke-width="1.6" stroke-dasharray="4 4"/></svg>Recomendado</span>
+      <span><svg viewBox="0 0 26 8" aria-hidden="true"><path d="M0 4h26" stroke="#e0a526" stroke-width="2.4"/></svg>Lo que necesitas</span>
+      <span><svg viewBox="0 0 26 8" aria-hidden="true"><path d="M0 4h26" stroke="#1d8467" stroke-width="2.4"/></svg>Lo que te abre</span>
+    </div>
+    <div class="map-scroll"><div class="map" id="map"></div></div>
+    <div class="map-info" id="mapinfo" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- EQUIVALENCIAS -->
+<section id="equivalencias" class="white">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">05 · Equivalencias</div><h2>¿En qué se convierte mi materia?</h2></div>
+      <p>Escribe el nombre de una materia del plan anterior y te mostramos con cuál se homologa en el nuevo, en qué semestre queda y cuántos créditos vale. Sale de la Tabla 13 del PAE.</p>
+    </div>
+    <div class="eq-grid">
+      <div class="reveal">
+        <div class="search">
+          <label for="q">Materia del plan anterior</label>
+          <div style="position:relative">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="q" type="search" autocomplete="off" placeholder="Ej.: Cálculo I, Redes de Datos…">
+          </div>
+        </div>
+        <div class="quick" id="quick"></div>
+        <p class="hint" style="margin-top:22px">Si ya aprobaste una materia, no la repites: se reconoce por equivalencia de resultados de aprendizaje. Los créditos que no tengan equivalente directo pueden contar como electivas, según lo estudie el Comité Curricular.</p>
+      </div>
+      <div class="results" id="results" aria-live="polite"></div>
+    </div>
+    <details class="full reveal">
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>Ver la tabla completa de equivalencias</summary>
+      <div class="filters" id="filters"></div>
+      <div class="tbl"><table><thead><tr><th>Sem.</th><th>Materia nueva</th><th>Cr.</th><th>Equivalente anterior</th><th>Cr. ant.</th><th>Δ</th><th>Prerrequisitos</th><th>Estado</th></tr></thead><tbody id="eqb"></tbody></table></div>
+    </details>
+  </div>
+</section>
+
+<!-- ESTRUCTURA -->
+<section id="creditos">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">06 · Estructura</div><h2>Cómo se reparten los 154 créditos</h2></div>
+      <p>Dos terceras partes de la carrera son formación disciplinar y de profundización. El resto se divide entre la base matemática y física, y la formación social y humanística.</p>
+    </div>
+    <div class="struct">
+      <div class="reveal">
+        <div class="donut" id="donut"></div>
+        <div class="dleg" id="dleg"></div>
+      </div>
+      <div class="hb reveal" id="hb" style="--i:1"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFILES -->
+<section id="perfiles" class="white">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">07 · Perfiles</div><h2>Quién entra, quién sale y en qué trabaja</h2></div>
+      <p>El PAE describe qué se espera de quien llega, qué sabe hacer quien se gradúa y en qué cargos suele terminar.</p>
+    </div>
+    <div class="reveal"><div class="tabs" id="ptabs" role="tablist" aria-label="Perfiles"><span class="ind" id="pind"></span></div></div>
+    <div class="prof" id="pbody"></div>
+
+    <div class="comp">
+      <div class="reveal"><h3>Seis competencias, siete resultados de aprendizaje</h3>
+      <p>La barra muestra hasta qué nivel cognitivo llega cada competencia, en la escala de Bloom: de recordar (1) a crear (6).</p></div>
+      <div id="comp"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GRADO -->
+<section id="grado" class="dark">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">08 · Grado</div><h2>Cómo te gradúas</h2></div>
+      <p>Además de aprobar el plan de estudios, necesitas tres cosas. El trabajo de grado tiene cinco modalidades y una de ellas te mete directo en un posgrado.</p>
+    </div>
+    <div class="req reveal">
+      <div><b>5 cr</b><p><strong>Trabajo de grado.</strong> Entre 4 y 12 meses. Lo puedes empezar con el 75 % de los créditos aprobados y el Proyecto Integrador.</p></div>
+      <div><b>L2</b><p><strong>Segunda lengua.</strong> Debes demostrar suficiencia. Inglés y nivelación quedan como libre elección fuera del plan.</p></div>
+      <div><b>Art. 84</b><p><strong>Requisitos institucionales.</strong> Los del Reglamento Estudiantil (Acuerdo 130 de 1998).</p></div>
+    </div>
+    <div class="mods" id="mods" tabindex="0" aria-label="Modalidades de trabajo de grado"></div>
+    <div class="pos">
+      <div class="reveal"><h3>La opción posgrado</h3><p>Si cursas y apruebas el primer semestre de un posgrado afín, eso cuenta como tu trabajo de grado. Estos son los que ofrece la misma Escuela:</p></div>
+      <ul class="reveal" style="--i:1">
+        <li><span>Especialización en Bases de Datos</span><small>Especialización</small></li>
+        <li><span>Especialización en Programación para Ciencia de Datos</span><small>Especialización</small></li>
+        <li><span>Doctorado en Ingeniería, énfasis en Sistemas y Computación</span><small>Doctorado</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSICION -->
+<section id="transicion">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">09 · Transición</div><h2>Si ya vas en el plan anterior</h2></div>
+      <p>Nadie pierde lo que ya aprobó. El plan nuevo arranca el primer semestre del año siguiente a su aprobación y es el único para quienes entran. Tú puedes quedarte o pasarte; la recomendación del PAE es migrar.</p>
+    </div>
+    <div class="tr-grid">
+      <div class="panel reveal">
+        <h3>¿Qué me toca a mí?</h3>
+        <p>Mueve la barra hasta el porcentaje de créditos que llevas aprobados en el plan anterior.</p>
+        <label class="sr" for="pct">Porcentaje de créditos aprobados</label>
+        <div class="pct"><span id="pctv">40</span><small>% aprobado</small></div>
+        <input type="range" id="pct" min="0" max="100" value="40">
+        <div class="scale"><span>0 %</span><span class="mark">70 %</span><span>100 %</span></div>
+        <div class="verdict" id="verdict"></div>
+      </div>
+      <div class="panel reveal" style="--i:1">
+        <h3>¿Ya inscribiste el Seminario de Trabajo de Grado?</h3>
+        <p>Esto cambia cómo terminas tu trabajo de grado.</p>
+        <div class="seg-btns" id="sem-btns">
+          <button type="button" aria-pressed="false" data-v="si">Sí, inscrito o aprobado</button>
+          <button type="button" aria-pressed="true" data-v="no">Todavía no</button>
+        </div>
+        <div class="verdict" id="semv"></div>
+        <div class="coex">
+          <small>Periodo de coexistencia de los dos planes</small>
+          <div class="coex-bar" aria-hidden="true"><i style="--i:0">Año 1</i><i style="--i:1">Año 2</i><i style="--i:2">Año 3</i><i style="--i:3">Año 4</i><i class="end" style="--i:4">Cierre</i></div>
+          <small style="display:block;margin-top:8px">Hasta cuatro años desde que arranca el plan nuevo. Después, el plan anterior se cierra y quien siga en él migra con sus homologaciones.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="tr-grid" style="margin-top:20px">
+      <div class="panel reveal">
+        <h3>Cómo se pide el cambio de plan</h3>
+        <p>Puedes solicitarlo en cualquier momento.</p>
+        <ol class="steps">
+          <li><b>Solicitud</b><span>Presentas la solicitud formal de cambio de plan en la Dirección de Escuela.</span></li>
+          <li><b>Estudio de homologaciones</b><span>El Comité Curricular revisa lo que aprobaste y arma tu plan de estudios restante.</span></li>
+          <li><b>Resolución</b><span>El Consejo de Facultad aprueba el cambio y las homologaciones.</span></li>
+          <li><b>Registro</b><span>Se actualiza SIRA y te llega la notificación.</span></li>
+        </ol>
+      </div>
+      <div class="panel reveal" style="--i:1">
+        <h3>Reglas que conviene saber</h3>
+        <div class="rules">
+          <div><b>No repites</b><p>Si una materia desapareció o bajó de créditos y ya la viste, se homologa por resultados de aprendizaje.</p></div>
+          <div><b>Créditos sobrantes</b><p>Lo aprobado sin equivalente directo puede contar como electiva de complementariedad o de profundización.</p></div>
+          <div><b>Inglés</b><p>Sigue como requisito extracurricular o se homologa según la norma institucional vigente.</p></div>
+          <div><b>Casos raros</b><p>Lo que no esté previsto lo resuelve el Comité Curricular, a favor del estudiante.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section id="historia" class="dark">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">10 · Historia</div><h2>Más de 30 años de programa</h2></div>
+      <p>El programa abrió en 1995. Desde entonces ha renovado su acreditación de alta calidad tres veces y tiene sello internacional EUR-ACE. Este PAE es la reforma más reciente.</p>
+    </div>
+    <div class="tl reveal" id="tl" tabindex="0" aria-label="Línea de tiempo del programa"></div>
+  </div>
+</section>
+
+<!-- INVESTIGACION -->
+<section id="investigacion" class="white">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><div class="tag">11 · Investigación</div><h2>Grupos, semilleros y vida fuera del aula</h2></div>
+      <p>Puedes entrar a un semillero desde los primeros semestres. Un año en un grupo de investigación te abre una modalidad de grado.</p>
+    </div>
+    <div class="groups">
+      <article class="grp spot reveal"><b>GIMI</b><small>Grupo de Investigación en Manejo de Información</small><p>Inteligencia de negocios, minería de datos, bases de datos espaciales y computación cuántica.</p></article>
+      <article class="grp spot reveal" style="--i:1"><b>GIS</b><small>Grupo de Investigación en Software</small><p>Ingeniería de software, videojuegos, dispositivos embebidos e inteligencia artificial.</p></article>
+      <article class="grp spot reveal" style="--i:2"><b>TelemaTICs</b><small>Telemática y ciberseguridad</small><p>Ciberseguridad, Internet of Everything y sistemas adaptativos.</p></article>
+    </div>
+    <div class="semis reveal" id="semis" aria-label="Semilleros de investigación"></div>
+
+    <div class="out">
+      <div class="reveal"><h3>Lo que el PAE propone con el sector externo</h3><p>Algunas ya funcionan y otras están planteadas para los próximos semestres.</p></div>
+      <div class="olist reveal" style="--i:1">
+        <div><b>Muestra semestral de proyectos</b><p>Abierta a empresas y entidades de la región.</p></div>
+        <div><b>Retos y hackatones</b><p>Con problemas que plantean empresas e instituciones.</p></div>
+        <div><b>Graduados como mentores</b><p>Para estudiantes de últimos semestres, con charlas y acompañamiento.</p></div>
+        <div><b>Redes y capítulos</b><p>ACOFI, REDIS, IEEE Computer Society, ACM y LACCEI.</p></div>
+      </div>
+    </div>
+
+    <div class="infra">
+      <div class="reveal"><b>Laboratorios</b><p>Física, Electrónica (LS 112) y el laboratorio del grupo GIS.</p></div>
+      <div class="reveal" style="--i:1"><b>Aulas de cómputo</b><p>Salas de la sede central con software especializado.</p></div>
+      <div class="reveal" style="--i:2"><b>Moodle</b><p>Aulas virtuales y conectividad institucional.</p></div>
+      <div class="reveal" style="--i:3"><b>Admisión</b><p>45 cupos por semestre y prueba diagnóstica de matemáticas y lectura crítica.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>¿Dudas sobre tu caso? Pregunta en la Dirección de Escuela.</b>
+      <p>Fuente: Proyecto Académico Educativo de Ingeniería de Sistemas y Computación, versión 2 (19 de noviembre de 2026). Esta página resume el documento para socializarlo con estudiantes; si algo no coincide, manda el documento aprobado.</p>
+    </div>
+    <a class="top" href="#top">Volver arriba <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+  </div>
+</footer>
 
 <script>
-const $=s=>document.querySelector(s),E=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
-const SEC=[["info","Información"],["mv","Misión y visión"],["identidad","Identidad"],["perfiles","Perfiles"],["comp","Competencias"],["malla","Malla"],["estructura","Estructura"],["inv","Investigación"],["infra","Infraestructura"],["transicion","Transición"],["revisar","Revisar"]];
-$("#nav").innerHTML=SEC.map(s=>`<a href="#${s[0]}">${s[1]}</a>`).join("");
-const KP=[["Créditos","175","154"],["Semestres","10","9"],["Cupos por semestre","—","45"],["Actividades por semestre (máx.)","—","6"]];
-$("#kpis").innerHTML=KP.map(k=>`<div class="card kpi"><small>${k[0]}</small><b>${k[2]}</b><span class="arrow">${k[1]!=="—"?"antes: "+k[1]:"nuevo plan"}</span></div>`).join("");
-$("#ficha").innerHTML=[["Programa","Ingeniería de Sistemas y Computación"],["SNIES","2760"],["Creación","Acuerdo 015 de 1994"],["Sede / Facultad","Tunja · Facultad de Ingeniería"],["Título","Ingeniero de Sistemas y Computación"],["Modalidad / nivel","Presencial · Pregrado"],["Admisión","Semestral"],["Campo CINE 2013","TIC — Uso de computadores"],["NBC","Ingeniería de sistemas, telemática y afines"]].map(r=>`<tr><th style="width:35%">${r[0]}</th><td>${r[1]}</td></tr>`).join("");
-const PF={"Ingreso":["Motivación por el conocimiento y las tendencias tecnológicas","Comunicación oral y escrita efectiva","Pensamiento analítico y adaptabilidad","Respeto por la diversidad e interés en el inglés","Prueba diagnóstica: matemáticas (cálculo) y lectura crítica"],
-"Egreso":["Implementar y evaluar soluciones tecnológicas","Participar en grupos de investigación con empresa, academia y Estado","Crear y administrar empresas de base tecnológica","Gestionar el cambio con enfoque socio-humanístico","Comunicar soluciones en contextos locales, regionales y globales"],
-"Ocupacional":["Líder gestor de proyectos tecnológicos","Arquitecto de soluciones informáticas","Asesor, consultor, coordinador o auditor de TIC","Miembro de equipos de I+D interdisciplinarios","Gestor empresarial de base tecnológica"]};
-const pt=$("#ptabs");Object.keys(PF).forEach((k,i)=>{const b=E("button",i?"":"on","Perfil de "+k.toLowerCase());b.onclick=()=>{pt.querySelectorAll("button").forEach(x=>x.className="");b.className="on";sh(k)};pt.append(b)});
-const sh=k=>$("#pbody").innerHTML="<ul style='margin:0;padding-left:18px'>"+PF[k].map(x=>`<li>${x}</li>`).join("")+"</ul>";sh("Ingreso");
-const CP=[["C1 Apropiar fundamentos de Gestión de Información, Software, Infraestructura TI, Programación y ciencias básicas","RA1 Comprende conceptos y teorías","Comprender"],["C2 Diseñar soluciones sostenibles y con restricciones técnicas, económicas, sociales y ambientales","RA2 Diseña soluciones tecnológicas","Crear"],["C3 Implementar y evaluar con estándares y calidad","RA3 Implementa soluciones · RA4 Evalúa calidad","Aplicar · Evaluar"],["C4 Investigación disciplinar con rigor y ética","RA5 Aplica procesos de investigación","Aplicar"],["C5 Integración de equipos con formación socio-humanística","RA6 Trabajo individual y colaborativo","Aplicar"],["C6 Comunicar a públicos especializados y no especializados","RA7 Comunica ideas y soluciones","Aplicar"]];
-$("#comptb").innerHTML=CP.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><span class="pill">${r[2]}</span></td></tr>`).join("");
-/* [semNuevo, nombre, cr, tipo, [[ant, cr, semAnt]], flag] F fundamentación D disciplinar H socio-humanístico P profundización/proyecto */
+(()=>{
+const doc=document.documentElement,body=document.body;
+body.classList.remove('no-js');doc.classList.add('js');
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+/* ===== DATA (PAE V2: Tablas 3, 4, 6 y 13) ===== */
+/* [sem nuevo, nombre, créditos, tipo, [[equivalente anterior, cr, sem anterior]], flag] */
 const N=[
-[1,"Cálculo Diferencial",3,"F",[["Cálculo I",4,1]]],[1,"Matemáticas Discretas",3,"F",[["Matemáticas Discretas",3,2]]],[1,"Física Mecánica",3,"F",[["Física I",4,2]]],[1,"Introducción a los Sistemas y a la Computación",2,"D",[]],[1,"Fundamentos de Algoritmos y Programación",3,"D",[["Algoritmos y Programación",4,1]]],[1,"Metodología de la Investigación*",3,"D",[["Metodología de la Investigación y Diseño Experimental",3,3]],1],
+[1,"Cálculo Diferencial",3,"F",[["Cálculo I",4,1]]],[1,"Matemáticas Discretas",3,"F",[["Matemáticas Discretas",3,2]]],[1,"Física Mecánica",3,"F",[["Física I",4,2]]],[1,"Introducción a los Sistemas y a la Computación",2,"D",[]],[1,"Fundamentos de Algoritmos y Programación",3,"D",[["Algoritmos y Programación",4,1]]],[1,"Metodología de la Investigación",3,"D",[["Metodología de la Investigación y Diseño Experimental",3,3]],1],
 [2,"Cálculo Integral",3,"F",[["Cálculo II",3,2]]],[2,"Álgebra Lineal",3,"F",[["Álgebra Lineal",3,2]]],[2,"Electromagnetismo y Ondas",3,"F",[["Física II",4,3]]],[2,"Programación I",3,"D",[["Programación I",4,2]]],[2,"Electrónica para Computación",3,"D",[["Electrónica General",4,5]]],[2,"Socio-Humanística I (electiva)",3,"H",[["Cátedra, Universidad y Entorno",3,1]]],
 [3,"Cálculo Multivariable",3,"F",[["Cálculo III",3,3]]],[3,"Probabilidad y Estadística",3,"F",[["Probabilidad y Estadística",3,4]]],[3,"Programación II",3,"D",[["Programación II",4,3],["Programación III",4,4]]],[3,"Bases de Datos I",3,"D",[["Bases de Datos I",4,5]]],[3,"Diseño de Interfaces para Sistemas Tecnológicos",2,"D",[]],[3,"Socio-Humanística II (electiva)",3,"H",[["Competencias Comunicativas",4,1]]],
 [4,"Ecuaciones Diferenciales",3,"F",[["Cálculo IV",3,4]]],[4,"Programación III",3,"D",[]],[4,"Bases de Datos II",3,"D",[["Bases de Datos II",4,6]]],[4,"Fundamentos de Transmisión y Redes de Datos",3,"D",[["Redes de Datos",4,8],["Transmisión de Datos",4,7]]],[4,"Fundamentos e Ingeniería de Requisitos de Software",3,"D",[["Ingeniería de Requisitos",4,5]]],[4,"Arquitectura y Organización de Computadores",3,"D",[["Arquitectura de Computadores",3,8]]],
@@ -131,33 +897,219 @@ const N=[
 [7,"Ingeniería de Software III",3,"D",[]],[7,"Lenguajes Formales y Compiladores",3,"D",[["Lenguajes Formales",4,7]]],[7,"Computación Paralela y Distribuida",2,"D",[["Sistemas Distribuidos",3,7]]],[7,"Infraestructura de Nube",3,"D",[]],[7,"Emprenderismo",3,"H",[["Administración",3,8]]],[7,"Socio-Humanística V (electiva)",3,"H",[["Socio-humanística II",3,3]]],
 [8,"Contratación Tecnológica",3,"D",[]],[8,"Gerencia y Contratación Informática",3,"D",[["Gerencia Informática",3,9]]],[8,"Electiva de Profundización I",4,"P",[]],[8,"Electiva de Profundización II",4,"P",[]],[8,"Inteligencia Computacional",3,"D",[["Inteligencia Computacional",4,8]]],[8,"Proyecto Integrador",3,"P",[]],
 [9,"Auditoría Informática",2,"D",[["Auditoría de Sistemas",3,9]]],[9,"Electiva de Profundización III",4,"P",[]],[9,"Modelos de Simulación",3,"D",[["Simulación",4,9]]],[9,"Trabajo de Grado",5,"P",[]]];
-const KN={F:"Fundamentación",D:"Disciplinar",H:"Social y humanístico",P:"Profundización / proyecto"};
-const NIN="Ninguno",PD="50 % de créditos del componente disciplinar";
-const PR={"Cálculo Diferencial":NIN,"Matemáticas Discretas":NIN,"Física Mecánica":NIN,"Introducción a los Sistemas y a la Computación":NIN,"Fundamentos de Algoritmos y Programación":NIN,"Metodología de la Investigación*":NIN,"Cálculo Integral":"Cálculo Diferencial","Álgebra Lineal":NIN,"Electromagnetismo y Ondas":"Física Mecánica","Programación I":NIN,"Electrónica para Computación":"Física Mecánica (recomendado)","Cálculo Multivariable":"Cálculo Integral","Probabilidad y Estadística":"Cálculo Integral","Programación II":"Programación I","Bases de Datos I":"Matemáticas Discretas","Diseño de Interfaces para Sistemas Tecnológicos":"Programación II","Ecuaciones Diferenciales":"Cálculo Multivariable","Programación III":"Programación II","Bases de Datos II":"Bases de Datos I","Fundamentos de Transmisión y Redes de Datos":"Electrónica para Computación","Fundamentos e Ingeniería de Requisitos de Software":NIN,"Arquitectura y Organización de Computadores":"Electrónica para Computación","Métodos Numéricos":"Cálculo Integral + Programación I","Programación IV":"Programación III","Bases de Datos III":"Bases de Datos II","Infraestructura y Servicios de TI":"Fundamentos de Transmisión y Redes de Datos","Ingeniería de Software I":"Fundamentos e Ingeniería de Requisitos de Software","Sistemas Operativos":"Arquitectura y Organización de Computadores","Programación Lineal y Optimización":"Álgebra Lineal","Fundamentos de Seguridad Informática":"Infraestructura y Servicios de TI","Ingeniería de Software II":"Ingeniería de Software I","Ingeniería de Software III":"Ingeniería de Software II","Lenguajes Formales y Compiladores":"Matemáticas Discretas","Computación Paralela y Distribuida":"Sistemas Operativos","Infraestructura de Nube":"Fundamentos de Seguridad Informática","Gerencia y Contratación Informática":"Ingeniería de Software I (recomendado)","Electiva de Profundización I":PD,"Electiva de Profundización II":PD,"Electiva de Profundización III":PD,"Inteligencia Computacional":"Probabilidad y Estadística + Programación III","Proyecto Integrador":"Ingeniería de Software I + Bases de Datos II","Auditoría Informática":"Ingeniería de Software II + Fundamentos de Seguridad Informática + Bases de Datos II","Modelos de Simulación":"Métodos Numéricos + Probabilidad y Estadística","Trabajo de Grado":"Proyecto Integrador + 75 % de créditos aprobados"};
-const pr=n=>PR[n[1]]||"No definido en la Tabla 4";
-const tot=s=>N.filter(n=>n[0]==s&&!n[5]).reduce((a,n)=>a+n[2],0);
-const oldC=s=>N.flatMap(n=>n[4].map(o=>({n:o[0],c:o[1],s:o[2],to:n[0],nn:n[1]}))).filter(o=>o.s==s);
-const oT=s=>oldC(s).reduce((a,o)=>a+o.c,0);
-const mx=24,S=[1,2,3,4,5,6,7,8,9,10];
-$("#bars").innerHTML=S.map(s=>{const o=s<=9?oT(s):0,n=s<=9?tot(s):0;return`<div class="col"><div class="pair"><div class="b o" style="height:${o/mx*100}%"><span>${o||"—"}</span></div><div class="b n" style="height:${n/mx*100}%"><span>${n||"—"}</span></div></div><div class="lab">S${s}</div></div>`}).join("");
-$("#leg2").innerHTML=Object.keys(KN).map(k=>`<span><i style="background:var(--${k})"></i>${KN[k]}</span>`).join("")+`<span><i style="background:var(--old)"></i>Plan anterior</span>`;
-let cur=1;const st=$("#stabs");S.forEach(s=>{const b=E("button",s==1?"on":"","Sem. "+s);b.onclick=()=>{st.querySelectorAll("button").forEach(x=>x.className="");b.className="on";cur=s;draw()};st.append(b)});
-function draw(){const s=cur,ol=oldC(s),nl=N.filter(n=>n[0]==s);
-$("#oL").innerHTML=ol.length?ol.map(o=>`<div class="c O"><div>${o.n}<small>→ nuevo: ${o.nn} (S${o.to})</small></div><span class="cr">${o.c} cr</span></div>`).join(""):`<div class="c O">${s==10?"Semestre sin detalle en el PAE (electivas, trabajo de grado y créditos restantes del plan de 175).":"Sin actividades homologadas listadas."}</div>`;
-$("#nL").innerHTML=nl.length?nl.map(n=>`<div class="c ${n[3]}"><div>${n[1]}<small>${n[4].length?"Equivale a: "+n[4].map(o=>o[0]).join(" + "):"Actividad nueva"}</small><small>🔗 Prerreq.: ${pr(n)}</small></div><span class="cr">${n[2]} cr</span></div>`).join(""):`<div class="c">El nuevo plan termina en el semestre 9.</div>`;
-$("#oT").textContent=ol.length?oT(s)+" créditos":"";$("#nT").textContent=nl.length?tot(s)+" créditos":"";
-$("#note").textContent=s==1?"* Metodología de la Investigación aparece en las Tablas 4, 6, 7 y 13 pero no en la Tabla 3; no se suma a los 154 créditos.":"Prerrequisitos tomados de la Tabla 4; en esa tabla algunas actividades están en otro semestre que en la Tabla 3."}
-draw();
-const FL={all:"Todas",nuevo:"Actividades nuevas",cambio:"Cambian créditos",igual:"Mismos créditos"};let ff="all";
-const fb=$("#flt");Object.keys(FL).forEach(k=>{const b=E("button",k=="all"?"on":"",FL[k]);b.onclick=()=>{fb.querySelectorAll("button").forEach(x=>x.className="");b.className="on";ff=k;eq()};fb.append(b)});
-function eq(){$("#eqb").innerHTML=N.map(n=>{const oc=n[4].reduce((a,o)=>a+o[1],0),d=n[2]-oc,k=!n[4].length?"nuevo":d?"cambio":"igual";if(ff!="all"&&ff!=k)return"";
-return`<tr><td>${n[0]}</td><td>${n[1]}</td><td>${n[2]}</td><td>${n[4].map(o=>o[0]+" (S"+o[2]+")").join("<br>")||"—"}</td><td>${n[4].length?oc:"—"}</td><td>${n[4].length?(d>0?"+":"")+d:"—"}</td><td>${pr(n)}</td><td><span class="pill ${k=="nuevo"?"new":k=="cambio"?"chg":""}">${k=="nuevo"?"Nueva":k=="cambio"?"Ajuste":"Igual"}</span></td></tr>`}).join("")}eq();
-const CO=[["Fundamentación",27,"F"],["Formación investigativa",3,"F"],["Núcleo de gestión",6,"F"],["Software",12,"D"],["AISTI (redes e infraestructura)",12,"D"],["Gestión de la información",9,"D"],["Programación",12,"D"],["Ciencias computacionales",15,"D"],["Núcleo integrador",23,"D"],["Electivas e interdisciplinar",20,"P"],["Humanístico y lenguaje",6,"H"],["Social y ambiental",9,"H"]];
-$("#hb").innerHTML=CO.map(c=>`<div class="hbar"><span>${c[0]}</span><div class="track"><div class="fill" style="width:${c[1]/27*100}%;background:var(--${c[2]})"></div></div><b>${c[1]}</b></div>`).join("");
-const DG=[["Fundamentación",23.37,"F"],["Disciplinar y profundización",66.89,"D"],["Social y humanístico",9.74,"H"]];let off=25;
-$("#dn").innerHTML=DG.map(d=>{const r=`<circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--${d[2]})" stroke-width="6" stroke-dasharray="${d[1]} ${100-d[1]}" stroke-dashoffset="${off}"/>`;off-=d[1];return r}).join("")+`<text x="21" y="22" text-anchor="middle" font-size="7" font-weight="700" fill="var(--tx)">154</text><text x="21" y="27" text-anchor="middle" font-size="3" fill="var(--mu)">créditos</text>`;
-$("#dl").innerHTML=DG.map(d=>`<div><i style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--${d[2]});margin-right:6px"></i>${d[0]}: <b>${d[1]} %</b></div>`).join("");
-const RV=["Metodología de la Investigación está en las Tablas 4, 6, 7 y 13 pero falta en la Tabla 3 (sin ella, el plan suma 154; con ella, 157).","Proyecto Integrador figura en el semestre 8 (Tabla 3) y en el 6 (Tabla 4); además se marca como «Electiva».","Trabajo de grado (5 cr) está como electiva y requiere el Proyecto Integrador y 75 % de créditos.","Tabla 4 usa semestres distintos a la Tabla 3 para varias actividades (p. ej. Bases de Datos I en S4 vs S3, Auditoría en S7 vs S9).","Los totales por semestre de la Tabla 13 (p. ej. S5 anterior = 10 cr) no coinciden con una malla anterior completa; el plan anterior solo se reconstruye parcialmente (139 de 175 créditos).","La Tabla 18 de laboratorios aún cita Física I–III y Electrónica General, nombres del plan anterior."];
-$("#rv").innerHTML=RV.map(r=>`<li>${r}</li>`).join("");
-const links=[...document.querySelectorAll("nav a")],obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id))}),{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("section").forEach(s=>obs.observe(s));
-</script></body></html>
+const KN={F:"Fundamentación",D:"Disciplinar",H:"Social y humanístico",P:"Profundización y proyecto"};
+const NIN="Ninguno",PD="50 % de los créditos del componente disciplinar";
+const PR={"Cálculo Diferencial":NIN,"Matemáticas Discretas":NIN,"Física Mecánica":NIN,"Introducción a los Sistemas y a la Computación":NIN,"Fundamentos de Algoritmos y Programación":NIN,"Metodología de la Investigación":NIN,"Cálculo Integral":"Cálculo Diferencial","Álgebra Lineal":NIN,"Electromagnetismo y Ondas":"Física Mecánica","Programación I":NIN,"Electrónica para Computación":"Física Mecánica (recomendado)","Cálculo Multivariable":"Cálculo Integral","Probabilidad y Estadística":"Cálculo Integral","Programación II":"Programación I","Bases de Datos I":"Matemáticas Discretas","Diseño de Interfaces para Sistemas Tecnológicos":"Programación II","Ecuaciones Diferenciales":"Cálculo Multivariable","Programación III":"Programación II","Bases de Datos II":"Bases de Datos I","Fundamentos de Transmisión y Redes de Datos":"Electrónica para Computación","Fundamentos e Ingeniería de Requisitos de Software":NIN,"Arquitectura y Organización de Computadores":"Electrónica para Computación","Métodos Numéricos":"Cálculo Integral + Programación I","Programación IV":"Programación III","Bases de Datos III":"Bases de Datos II","Infraestructura y Servicios de TI":"Fundamentos de Transmisión y Redes de Datos","Ingeniería de Software I":"Fundamentos e Ingeniería de Requisitos de Software","Sistemas Operativos":"Arquitectura y Organización de Computadores","Programación Lineal y Optimización":"Álgebra Lineal","Fundamentos de Seguridad Informática":"Infraestructura y Servicios de TI","Ingeniería de Software II":"Ingeniería de Software I","Ingeniería de Software III":"Ingeniería de Software II","Lenguajes Formales y Compiladores":"Matemáticas Discretas","Computación Paralela y Distribuida":"Sistemas Operativos","Infraestructura de Nube":"Fundamentos de Seguridad Informática","Gerencia y Contratación Informática":"Ingeniería de Software I (recomendado)","Electiva de Profundización I":PD,"Electiva de Profundización II":PD,"Electiva de Profundización III":PD,"Inteligencia Computacional":"Probabilidad y Estadística + Programación III","Proyecto Integrador":"Ingeniería de Software I + Bases de Datos II","Auditoría Informática":"Ingeniería de Software II + Fundamentos de Seguridad Informática + Bases de Datos II","Modelos de Simulación":"Métodos Numéricos + Probabilidad y Estadística","Trabajo de Grado":"Proyecto Integrador + 75 % de créditos aprobados"};
+
+const C=N.map((n,i)=>({i,sem:n[0],name:n[1],cr:n[2],t:n[3],eq:n[4].map(o=>({name:o[0],cr:o[1],sem:o[2]})),flag:!!n[5]}));
+const byName=Object.fromEntries(C.map(c=>[c.name,c]));
+C.forEach(c=>{
+  c.old=c.eq.reduce((a,o)=>a+o.cr,0);
+  c.st=!c.eq.length?'nueva':c.cr<c.old?'menos':c.cr>c.old?'mas':'igual';
+  const raw=PR[c.name];c.req=[];c.extra=[];c.prText=raw||'Sin prerrequisito registrado';
+  if(raw&&raw!==NIN)raw.split(' + ').forEach(p=>{const rec=/recomendado/.test(p),nm=p.replace(/\s*\(recomendado\)/,'').trim();byName[nm]?c.req.push({id:byName[nm].i,rec}):c.extra.push(nm)});
+});
+C.forEach(c=>{c.unl=[];});C.forEach(c=>c.req.forEach(r=>C[r.id].unl.push(c.i)));
+const semTot=s=>C.filter(c=>c.sem===s&&!c.flag).reduce((a,c)=>a+c.cr,0);
+const isElect=c=>/Electiva|Trabajo de Grado/.test(c.name);
+const NEW=C.filter(c=>c.st==='nueva'&&!isElect(c));
+const dname=c=>esc(c.name);
+const deltaLabel=c=>c.st==='nueva'?'Nueva':c.st==='igual'?'Igual':(c.cr-c.old>0?'+':'')+(c.cr-c.old)+' cr';
+
+/* ===== NAV ===== */
+const SEC=[["cambios","Cambios"],["enfoque","Enfoque"],["semestres","Semestres"],["mapa","Prerrequisitos"],["equivalencias","Equivalencias"],["creditos","Créditos"],["perfiles","Perfiles"],["grado","Grado"],["transicion","Transición"],["historia","Historia"],["investigacion","Investigación"]];
+$('#links').innerHTML=SEC.map(s=>`<a href="#${s[0]}">${s[1]}</a>`).join('');
+const nav=$('#nav'),prog=$('#progress'),links=$$('#links a');
+let ticking=false;
+const onScroll=()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=scrollY,h=doc.scrollHeight-innerHeight;nav.classList.toggle('solid',y>innerHeight*.75);prog.style.transform=`scaleX(${h>0?y/h:0})`;ticking=false})};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const secObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>{const on=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('on',on);if(on){const L=$('#links');L.scrollTo({left:a.offsetLeft-L.clientWidth/2+a.clientWidth/2,behavior:RM?'auto':'smooth'})}})}}),{rootMargin:'-45% 0px -50% 0px'});
+SEC.forEach(s=>{const el=document.getElementById(s[0]);el&&secObs.observe(el)});
+
+/* ===== HERO ===== */
+const h1=$('[data-split]');
+(function split(el){let i=0;const walk=node=>{[...node.childNodes].forEach(ch=>{if(ch.nodeType===3){const frag=document.createDocumentFragment();ch.textContent.split(/(\s+)/).forEach(tok=>{if(!tok)return;if(/^\s+$/.test(tok)){frag.append(tok);return}const w=document.createElement('span');w.className='w';const s=document.createElement('span');s.textContent=tok;s.style.setProperty('--i',i++);w.append(s);frag.append(w)});ch.replaceWith(frag)}else walk(ch)})};walk(el)})(h1);
+requestAnimationFrame(()=>requestAnimationFrame(()=>body.classList.add('ready')));
+
+const TERM=[
+ ['c','$ diff plan-vigente plan-nuevo'],
+ ['m','- créditos ............ 175'],
+ ['p','+ créditos ............ 154'],
+ ['m','- semestres ........... 10'],
+ ['p','+ semestres ........... 9'],
+ ['p',`+ materias nuevas ..... ${NEW.length}`],
+ ['p','+ máx. por semestre ... 6 actividades'],
+ ['c','# los dos planes conviven hasta 4 años']
+];
+const term=$('#term');
+const termHTML=n=>TERM.slice(0,n).map(l=>`<span class="${l[0]}">${esc(l[1])}</span>`).join('\n');
+if(RM){term.innerHTML=termHTML(TERM.length)+'\n<span class="caret"></span>'}
+else{let li=0,ci=0;const step=()=>{if(li>=TERM.length){term.innerHTML=termHTML(li)+'\n<span class="caret"></span>';return}const line=TERM[li];ci++;term.innerHTML=termHTML(li)+(li?'\n':'')+`<span class="${line[0]}">${esc(line[1].slice(0,ci))}</span><span class="caret"></span>`;if(ci>=line[1].length){li++;ci=0;setTimeout(step,li===1?420:160)}else setTimeout(step,li===0?38:16)};setTimeout(step,900)}
+
+const countDown=el=>{const[a,b]=el.dataset.count.split(':').map(Number);if(RM){el.textContent=b;return}const t0=performance.now(),d=1800;el.textContent=a;const f=t=>{const p=Math.min(1,(t-t0)/d),e=1-Math.pow(1-p,4);el.textContent=Math.round(a+(b-a)*e);if(p<1)requestAnimationFrame(f)};setTimeout(()=>requestAnimationFrame(f),1300)};
+$$('[data-count]').forEach(countDown);
+
+/* marquee + ticker */
+const mqA=NEW.map(c=>c.name),mqB=["154 créditos","9 semestres","Proyecto Integrador","32 créditos de libre elección","45 cupos por semestre","Acreditación de alta calidad hasta 2033","Sello EUR-ACE","Grupos de 20 en teórico-prácticas"];
+const fill=(el,arr)=>{const h=arr.map(t=>`<span>${esc(t)}</span>`).join('');el.innerHTML=h+h};
+fill($('#mq1'),mqA);fill($('#mq2'),mqB);
+$('#kNew').textContent=NEW.length;
+const tk=NEW.map(c=>`<li>${dname(c)}</li>`).join('');$('#ticker').innerHTML=tk+tk;
+
+/* ===== REVEAL ===== */
+const revObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revObs.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+const watch=root=>(root||document).querySelectorAll('.reveal:not(.in)').forEach(el=>revObs.observe(el));
+
+/* spotlight + magnetic */
+if(FINE){
+  $$('.spot').forEach(el=>el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--mx',e.clientX-r.left+'px');el.style.setProperty('--my',e.clientY-r.top+'px')}));
+  if(!RM)$$('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;b.style.transform=`translate(${x*.18}px,${y*.3}px)`});b.addEventListener('pointerleave',()=>{b.style.transform=''})});
+}
+
+/* ===== SEMESTRES ===== */
+const S=[1,2,3,4,5,6,7,8,9,10];
+const tabs=$('#semtabs');
+tabs.innerHTML=S.map((s,k)=>{const t=s<10?semTot(s):0;return`<button class="semtab${s===10?' ghost':''}" role="tab" id="st${s}" aria-selected="${s===1}" aria-controls="sempanel" tabindex="${s===1?0:-1}" style="--i:${k}"><div class="bar" style="--h:${s<10?t/20*82:34}"><span>${s<10?t:'—'}</span></div><div class="lbl">S${s}</div><span class="sr">${s<10?`Semestre ${s}, ${t} créditos`:'Semestre 10, ya no existe'}</span></button>`}).join('');
+const panel=$('#sempanel');
+function renderSem(s){
+  if(s===10){panel.innerHTML=`<div class="empty10"><b>El décimo semestre ya no existe</b>En el plan anterior la carrera duraba diez semestres; en el nuevo terminas en noveno, con el Trabajo de Grado. Materias que antes se veían en noveno, como Gerencia Informática, Auditoría de Sistemas y Simulación, ahora quedan en octavo y noveno.</div>`;return}
+  const list=C.filter(c=>c.sem===s);
+  const nw=list.filter(c=>c.st==='nueva'&&!isElect(c)).length;
+  panel.innerHTML=`<div class="semhead"><h3>Semestre ${s}</h3><span class="meta">${semTot(s)} créditos · ${list.filter(c=>!c.flag).length} actividades${nw?` · ${nw} nueva${nw>1?'s':''}`:''}</span></div>
+  <div class="semcols"><span>Plan anterior</span><span>Cambio</span><span>Plan nuevo</span></div>`+
+  list.map((c,k)=>`<div class="srow" style="--i:${k}">
+    <div>${c.eq.length?c.eq.map(o=>`<div class="oldc">${esc(o.name)}<small>Semestre ${o.sem} · ${o.cr} cr</small></div>`).join(''):`<div class="oldc none">${isElect(c)?'Espacio de libre elección':'No existía'}</div>`}</div>
+    <div class="mid"><svg viewBox="0 0 42 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 6h40M35 1l5 5-5 5"/></svg><span class="delta ${c.st}">${deltaLabel(c)}</span></div>
+    <div class="newc t-${c.t}${c.flag?' flag':''}"><div><b>${dname(c)}</b>${c.flag?'<span class="badge">por confirmar</span>':''}<small>${c.flag?'Aparece en las Tablas 4, 6, 7 y 13, pero no en el plan por semestres. No suma a los 154.':'Prerrequisito: '+esc(c.prText)}</small></div><span class="cr">${c.cr} cr</span></div>
+  </div>`).join('');
+}
+const selTab=s=>{$$('.semtab').forEach((b,k)=>{const on=S[k]===s;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});renderSem(s)};
+tabs.addEventListener('click',e=>{const b=e.target.closest('.semtab');if(b)selTab(+b.id.slice(2))});
+tabs.addEventListener('keydown',e=>{const cur=$$('.semtab').findIndex(b=>b.getAttribute('aria-selected')==='true');let n=cur;if(e.key==='ArrowRight')n=(cur+1)%10;else if(e.key==='ArrowLeft')n=(cur+9)%10;else return;e.preventDefault();selTab(S[n]);$$('.semtab')[n].focus()});
+renderSem(1);
+$('#legend').innerHTML=Object.keys(KN).map(k=>`<span class="t-${k}"><i></i>${KN[k]}</span>`).join('')+`<span><span class="delta nueva" style="padding:2px 8px">Nueva</span>sin equivalente</span><span><span class="delta menos" style="padding:2px 8px">−1 cr</span>bajó de créditos</span>`;
+
+/* ===== MAPA ===== */
+const map=$('#map');
+map.innerHTML='<svg class="edges" id="edges" aria-hidden="true"></svg>'+[1,2,3,4,5,6,7,8,9].map(s=>`<div class="mcol"><h4>S${s} <span>${semTot(s)} cr</span></h4>${C.filter(c=>c.sem===s).map(c=>`<button type="button" class="chip t-${c.t}${c.flag?' flag':''}" data-id="${c.i}" aria-label="${dname(c)}, semestre ${c.sem}">${dname(c).replace(' (electiva)','')}<small>${c.cr} cr${c.flag?' · por confirmar':''}</small></button>`).join('')}</div>`).join('');
+const svg=$('#edges'),chips=$$('.chip');
+const chip=id=>chips[C.findIndex(c=>c.i===id)];
+const EDGES=[];C.forEach(c=>c.req.forEach(r=>EDGES.push({from:r.id,to:c.i,rec:r.rec})));
+function drawEdges(){
+  svg.setAttribute('width',map.scrollWidth);svg.setAttribute('height',map.scrollHeight);
+  svg.innerHTML=EDGES.map((e,k)=>{const a=chip(e.from),b=chip(e.to);let x1,y1,x2,y2,d;
+    y1=a.offsetTop+a.offsetHeight/2;y2=b.offsetTop+b.offsetHeight/2;
+    if(C[e.from].sem===C[e.to].sem){x1=a.offsetLeft+a.offsetWidth;x2=b.offsetLeft+b.offsetWidth;d=`M${x1} ${y1}C${x1+26} ${y1},${x2+26} ${y2},${x2} ${y2}`}
+    else{x1=a.offsetLeft+a.offsetWidth;x2=b.offsetLeft;const dx=Math.max(18,(x2-x1)*.5);d=`M${x1} ${y1}C${x1+dx} ${y1},${x2-dx} ${y2},${x2} ${y2}`}
+    return`<path d="${d}" data-k="${k}" class="${e.rec?'rec':''}"/>`}).join('');
+}
+const anc=(id,set=new Set())=>{C[id].req.forEach(r=>{if(!set.has(r.id)){set.add(r.id);anc(r.id,set)}});return set};
+const desc=(id,set=new Set())=>{C[id].unl.forEach(u=>{if(!set.has(u)){set.add(u);desc(u,set)}});return set};
+let pinned=null;
+const info=$('#mapinfo');
+const idle=()=>{info.innerHTML=`<div><h3>Elige una materia</h3><p class="hint">Verás su cadena completa de prerrequisitos. Por ejemplo, Auditoría Informática depende de tres materias que a su vez dependen de otras.</p></div><div><div class="k"><i style="background:var(--gold)"></i>Necesitas antes</div><p class="hint">—</p></div><div><div class="k"><i style="background:var(--D)"></i>Te abre después</div><p class="hint">—</p></div>`};
+function focusC(id){
+  if(id==null){map.classList.remove('focus');chips.forEach(c=>c.classList.remove('on','anc','desc'));svg.querySelectorAll('path').forEach(p=>p.classList.remove('up','down','draw'));idle();return}
+  const A=anc(id),D=desc(id),c=C[id];
+  map.classList.add('focus');
+  chips.forEach(ch=>{const i=+ch.dataset.id;ch.classList.toggle('on',i===id);ch.classList.toggle('anc',A.has(i));ch.classList.toggle('desc',D.has(i))});
+  svg.querySelectorAll('path').forEach(p=>{const e=EDGES[+p.dataset.k];const up=(e.to===id||A.has(e.to))&&(A.has(e.from)),down=(e.from===id||D.has(e.from))&&D.has(e.to);p.classList.remove('draw');p.classList.toggle('up',up);p.classList.toggle('down',down&&!up);if((up||down)&&!RM&&!p.classList.contains('rec')){const L=p.getTotalLength();p.style.setProperty('--len',L);p.style.strokeDasharray=L;void p.getBoundingClientRect();p.classList.add('draw')}else if(!p.classList.contains('rec'))p.style.strokeDasharray=''});
+  const direct=c.req.map(r=>`<span>${esc(C[r.id].name)}${r.rec?' (recomendado)':''}</span>`).concat(c.extra.map(x=>`<span class="x">${esc(x)}</span>`));
+  const indirect=[...A].filter(i=>!c.req.some(r=>r.id===i)).map(i=>`<span class="x">${esc(C[i].name)}</span>`);
+  info.innerHTML=`<div><div class="k">Semestre ${c.sem} · ${c.cr} créditos · ${KN[c.t]}</div><h3>${dname(c)}</h3><p class="hint">${A.size?`${A.size} materia${A.size>1?'s':''} en su cadena de prerrequisitos.`:'Puedes inscribirla sin aprobar otra materia del plan.'}${D.size?` Abre el camino a ${D.size}.`:''}</p></div>
+  <div><div class="k"><i style="background:var(--gold)"></i>Necesitas antes</div><div class="pills">${direct.length?direct.join(''):'<p class="hint">Nada</p>'}${indirect.join('')}</div></div>
+  <div><div class="k"><i style="background:var(--D)"></i>Te abre después</div><div class="pills">${c.unl.length?c.unl.map(u=>`<span>${esc(C[u].name)}</span>`).join(''):'<p class="hint">No es prerrequisito de ninguna</p>'}</div></div>`;
+}
+map.addEventListener('pointerover',e=>{if(pinned!=null||!FINE)return;const ch=e.target.closest('.chip');if(ch)focusC(+ch.dataset.id)});
+map.addEventListener('pointerleave',()=>{if(pinned==null)focusC(null)});
+map.addEventListener('click',e=>{const ch=e.target.closest('.chip');if(!ch){pinned=null;focusC(null);return}const id=+ch.dataset.id;pinned=pinned===id?null:id;focusC(pinned)});
+map.addEventListener('focusin',e=>{const ch=e.target.closest('.chip');if(ch&&pinned==null)focusC(+ch.dataset.id)});
+idle();
+const redraw=()=>{drawEdges();if(pinned!=null)focusC(pinned)};
+new ResizeObserver(redraw).observe(map);
+document.fonts&&document.fonts.ready.then(redraw);
+const mapObs=new IntersectionObserver(es=>{if(es[0].isIntersecting){mapObs.disconnect();if(RM)return;svg.querySelectorAll('path:not(.rec)').forEach((p,k)=>{const L=p.getTotalLength();p.style.setProperty('--len',L);p.style.strokeDasharray=L;p.style.animationDelay=k*35+'ms';p.classList.add('draw');setTimeout(()=>{p.classList.remove('draw');p.style.strokeDasharray='';p.style.animationDelay=''},1200+k*35)})}},{threshold:.25});
+mapObs.observe(map);
+
+/* ===== EQUIVALENCIAS ===== */
+const OLD=C.flatMap(c=>c.eq.map(o=>({...o,to:c})));
+const q=$('#q'),res=$('#results');
+const hl=(s,t)=>{if(!t)return esc(s);const n=norm(s),i=n.indexOf(t);return i<0?esc(s):esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+t.length))+'</mark>'+esc(s.slice(i+t.length))};
+function search(v){
+  const t=norm(v.trim());
+  if(!t){res.innerHTML=`<div class="noresult"><b>Empieza a escribir</b>O toca una de las materias sugeridas. También puedes buscar por el nombre nuevo.</div>`;return}
+  const hits=OLD.filter(o=>norm(o.name).includes(t)||norm(o.to.name).includes(t)).slice(0,8);
+  if(!hits.length){res.innerHTML=`<div class="noresult"><b>No aparece en la tabla de equivalencias</b>Si la aprobaste y no tiene equivalente directo, el Comité Curricular puede reconocerla como electiva de complementariedad o de profundización. Pregunta en la Dirección de Escuela.</div>`;return}
+  res.innerHTML=hits.map((o,k)=>{const c=o.to,others=c.eq.filter(x=>x.name!==o.name);return`<div class="res" style="--i:${k}">
+    <div class="r-old"><small>Plan anterior · S${o.sem}</small><b>${hl(o.name,t)}</b><span class="cr">${o.cr} créditos</span></div>
+    <div class="arr">${ARROW}</div>
+    <div class="r-new t-${c.t}"><small>Plan nuevo · S${c.sem}</small><b>${hl(c.name,t)}</b><span class="cr">${c.cr} créditos${c.cr<o.cr&&!others.length?` (${c.cr-o.cr})`:''}</span></div>
+    ${others.length?`<div class="note">Junto con ${others.map(x=>esc(x.name)).join(' y ')}, se homologa como una sola materia.</div>`:''}
+  </div>`}).join('');
+}
+let qt;q.addEventListener('input',()=>{clearTimeout(qt);qt=setTimeout(()=>search(q.value),90)});
+$('#quick').innerHTML=["Cálculo I","Física I","Programación III","Redes de Datos","Economía","Investigación de Operaciones","Simulación"].map(x=>`<button type="button">${x}</button>`).join('');
+$('#quick').addEventListener('click',e=>{const b=e.target.closest('button');if(b){q.value=b.textContent;search(q.value)}});
+search('');
+const FL={all:"Todas",nueva:"Nuevas",menos:"Bajan de créditos",igual:"Mismos créditos"};let ff='all';
+const fb=$('#filters');fb.innerHTML=Object.keys(FL).map(k=>`<button type="button" data-k="${k}" aria-pressed="${k==='all'}">${FL[k]}</button>`).join('');
+fb.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;ff=b.dataset.k;fb.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));eqTable()});
+function eqTable(){$('#eqb').innerHTML=C.filter(c=>ff==='all'||c.st===ff).map(c=>`<tr><td class="n">${c.sem}</td><td>${dname(c)}${c.flag?' <span class="st">por confirmar</span>':''}</td><td class="n">${c.cr}</td><td>${c.eq.map(o=>esc(o.name)+' <span style="color:var(--muted)">(S'+o.sem+')</span>').join('<br>')||'—'}</td><td class="n">${c.eq.length?c.old:'—'}</td><td class="n">${c.eq.length?(c.cr-c.old>0?'+':'')+(c.cr-c.old):'—'}</td><td>${esc(c.prText)}</td><td><span class="st ${c.st}">${c.st==='nueva'?'Nueva':c.st==='menos'?'Ajuste':'Igual'}</span></td></tr>`).join('')}
+eqTable();
+
+/* ===== ESTRUCTURA ===== */
+const DG=[["Fundamentación",23.37,"var(--F)","36 créditos"],["Disciplinar y profundización",66.89,"var(--D)","103 créditos"],["Social y humanístico",9.74,"var(--H)","15 créditos"]];
+let off=0;
+$('#donut').innerHTML=`<svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="15.915" stroke="var(--line)"/>${DG.map((d,k)=>{const r=`<circle class="seg" cx="21" cy="21" r="15.915" stroke="${d[2]}" style="--i:${k};stroke-dashoffset:${-off}" data-v="${d[1]-.6}"/>`;off+=d[1];return r}).join('')}</svg><div class="center"><b class="mono" id="dnum">154</b><small>créditos</small></div>`;
+$('#dleg').innerHTML=DG.map(d=>`<div><i style="background:${d[2]}"></i><span>${d[0]} <span style="color:var(--muted);font-size:.88em">· ${d[3]}</span></span><b>${String(d[1]).replace('.',',')} %</b></div>`).join('');
+const dObs=new IntersectionObserver(es=>{if(es[0].isIntersecting){dObs.disconnect();$$('#donut .seg').forEach(c=>c.style.strokeDasharray=`${c.dataset.v} ${100-c.dataset.v}`)}},{threshold:.4});dObs.observe($('#donut'));
+const CO=[["F","Fundamentación",[["Ciencias básicas",27],["Formación investigativa",3],["Núcleo de gestión",6]]],["D","Disciplinar y profundización",[["Núcleo integrador",23],["Electivas e interdisciplinar",20],["Ciencias computacionales",15],["Software",12],["Redes e infraestructura (AISTI)",12],["Programación",12],["Gestión de la información",9]]],["H","Social y humanístico",[["Social y ambiental",9],["Humanismo y lenguajes",6]]]];
+let hk=0;$('#hb').innerHTML=CO.map(g=>`<div class="hb-group t-${g[0]}"><i></i>${g[1]}</div>`+g[2].map(r=>`<div class="hb-row t-${g[0]}"><span>${r[0]}</span><div class="hb-track"><i style="--v:${r[1]/27};--i:${hk++}"></i></div><b>${r[1]}</b></div>`).join('')).join('');
+
+/* ===== PERFILES ===== */
+const PF=[
+ ["Ingreso","Perfil de ingreso","Lo que se espera de quien llega. La admisión incluye una prueba diagnóstica de matemáticas y lectura crítica; hay 45 cupos por semestre.",["Ganas de aprender y curiosidad por la tecnología","Comunicación oral y escrita clara","Pensamiento analítico y capacidad de adaptarse","Respeto por la diversidad e interés por el inglés","Bases de cálculo y lectura crítica (prueba diagnóstica)"]],
+ ["Egreso","Perfil de egreso","Lo que sabe hacer quien termina la carrera.",["Implementar y evaluar soluciones tecnológicas","Investigar junto con empresas, academia y Estado","Crear y administrar empresas de base tecnológica","Gestionar el cambio con enfoque humanístico","Comunicar soluciones en contextos locales, regionales y globales"]],
+ ["Ocupacional","Perfil ocupacional","Cargos en los que suele trabajar un egresado.",["Líder de proyectos tecnológicos","Arquitecto de soluciones informáticas","Asesor, consultor, coordinador o auditor de TIC","Integrante de equipos de I+D interdisciplinarios","Gerente de empresas de base tecnológica"]]
+];
+const pt=$('#ptabs'),pind=$('#pind');
+pt.insertAdjacentHTML('beforeend',PF.map((p,k)=>`<button type="button" role="tab" aria-selected="${k===0}" data-k="${k}">${p[0]}</button>`).join(''));
+const moveInd=()=>{const b=pt.querySelector('[aria-selected="true"]');pind.style.transform=`translateX(${b.offsetLeft}px) scaleX(${b.offsetWidth})`};
+const showP=k=>{pt.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',+b.dataset.k===k));moveInd();const p=PF[k];$('#pbody').innerHTML=`<div class="prof-intro"><b>${p[1]}</b><p>${p[2]}</p></div><ul class="plist">${p[3].map((x,i)=>`<li style="--i:${i}"><span>0${i+1}</span>${x}</li>`).join('')}</ul>`};
+pt.addEventListener('click',e=>{const b=e.target.closest('button');if(b)showP(+b.dataset.k)});
+showP(0);addEventListener('resize',moveInd);document.fonts&&document.fonts.ready.then(moveInd);
+const BL=["Recordar","Comprender","Aplicar","Analizar","Evaluar","Crear"];
+const CP=[["C1","Apropiar los fundamentos de gestión de información, software, infraestructura de TI, programación y ciencias básicas","RA1 · Comprende conceptos y teorías",[2]],["C2","Diseñar soluciones sostenibles, con restricciones técnicas, económicas, sociales y ambientales","RA2 · Diseña soluciones tecnológicas",[6]],["C3","Implementar y evaluar soluciones con estándares de calidad","RA3 · Implementa soluciones · RA4 · Evalúa su calidad",[3,5]],["C4","Investigar en la disciplina con rigor y ética","RA5 · Aplica procesos de investigación",[3]],["C5","Trabajar en equipo con formación humanística","RA6 · Trabaja de forma individual y colaborativa",[3]],["C6","Comunicar a públicos especializados y no especializados","RA7 · Comunica ideas y soluciones",[3]]];
+$('#comp').innerHTML=CP.map((c,k)=>{const mx=Math.max(...c[3]);return`<div class="crow reveal" style="--i:${k%3}"><span class="id">${c[0]}</span><span>${c[1]}</span><span class="ra">${c[2]}</span><div class="bl"><div class="bloom" aria-label="Nivel: ${c[3].map(n=>BL[n-1]).join(' y ')}">${BL.map((b,j)=>`<i style="--j:${j}" class="${c[3].includes(j+1)?'h':j+1<mx?'f':''}"></i>`).join('')}</div><div class="bloom-l"><span>1</span><span>${c[3].map(n=>BL[n-1]).join(' · ')}</span><span>6</span></div></div></div>`}).join('');
+
+/* ===== GRADO ===== */
+const MODS=[["Trabajo monográfico",["75 % de los créditos aprobados"]],["Trabajo de investigación",["75 % de los créditos aprobados","Estar vinculado a un grupo de investigación"]],["Participación en grupo de investigación",["75 % de los créditos aprobados","Mínimo un año en el grupo, verificable en el SGI o el registro del semillero"]],["Práctica con proyección empresarial o social",["75 % de los créditos aprobados","Que una empresa te acepte para la práctica"]],["Primer semestre de un posgrado afín",["Todo el plan aprobado, menos el trabajo de grado","Ser admitido en el posgrado"]]];
+$('#mods').innerHTML=MODS.map((m,k)=>`<article class="mod reveal" style="--i:${k}"><span class="n">Modalidad 0${k+1}</span><h3>${m[0]}</h3><ul>${m[1].map(x=>`<li>${x}</li>`).join('')}</ul></article>`).join('');
+
+/* ===== TRANSICION ===== */
+const pct=$('#pct'),pv=$('#pctv'),ver=$('#verdict');let lastB='';
+function verdict(){const v=+pct.value;pv.textContent=v;pct.style.setProperty('--p',v+'%');
+  const b=v>70?'hi':v===70?'eq':'lo';
+  const T={hi:["Más del 70 %","Puedes terminar en el plan anterior","Siempre que te gradúes dentro de los cuatro años de coexistencia. Si no alcanzas, migras al nuevo con reconocimiento total de lo que cursaste."],
+           eq:["Justo en el límite","Habla con el Comité Curricular","El PAE fija reglas para más del 70 % y para menos del 70 %, pero no dice qué pasa exactamente en 70 %. Mejor confirmarlo en la Dirección de Escuela."],
+           lo:["Menos del 70 %","Te conviene migrar al plan nuevo","El programa incentiva el cambio. El Comité Curricular arma un plan individual con tus homologaciones, y lo que ya aprobaste no lo repites."]}[b];
+  if(b!==lastB){ver.classList.remove('anim');void ver.offsetWidth;ver.classList.add('anim');lastB=b}
+  ver.innerHTML=`<small>${T[0]}</small><b>${T[1]}</b><p>${T[2]}</p>`}
+pct.addEventListener('input',verdict);verdict();
+const semv=$('#semv'),sb=$('#sem-btns');
+const SV={si:["Sigues con el esquema anterior","Si ya inscribiste o aprobaste el Seminario de Trabajo de Grado, puedes terminar tu trabajo de grado como estaba en el plan anterior."],no:["Te acoges al esquema nuevo","Si migras, el camino es Proyecto Integrador (8.º semestre) y después Trabajo de Grado (5 créditos)."]};
+const setSV=k=>{sb.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===k));semv.classList.remove('anim');void semv.offsetWidth;semv.classList.add('anim');semv.innerHTML=`<small>Trabajo de grado</small><b>${SV[k][0]}</b><p>${SV[k][1]}</p>`};
+sb.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setSV(b.dataset.v)});setSV('no');
+
+/* ===== HISTORIA ===== */
+const TL=[["1979","El Acuerdo 042 crea el programa, pero las políticas del Estado no permiten abrirlo."],["1994","El Consejo Superior lo ratifica con el Acuerdo 015: diez semestres, jornada diurna."],["1995","Entran los primeros estudiantes."],["2006","Primera acreditación de alta calidad, por cuatro años."],["2010","Renovación de la acreditación por seis años."],["2018","Nueva renovación, otros seis años."],["2022","Sello internacional EUR-ACE Bachelor."],["2025","Registro calificado y acreditación renovados por ocho años."],["2026","PAE versión 2: 154 créditos y 9 semestres."]];
+$('#tl').innerHTML=TL.map((t,k)=>`<div class="tl-item${k===TL.length-1?' now':''}" style="--i:${k}"><i></i><b>${t[0]}</b><p>${t[1]}</p></div>`).join('');
+
+/* ===== SEMILLEROS ===== */
+$('#semis').innerHTML=["SCIECOM","SITEC","TELEMATICS · Ciberseguridad","TELEMATICS · IoT y sistemas adaptativos","Turing-McCarthy","IDES","SIA","INSIDE","VISER","DEVGAMER","ICCE · Computación cuántica"].map(s=>`<span>${s}</span>`).join('');
+
+watch();
+})();
+</script>
+</body>
+</html>
